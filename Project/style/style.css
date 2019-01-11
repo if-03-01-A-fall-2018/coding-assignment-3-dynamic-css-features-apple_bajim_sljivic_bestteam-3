@@ -1,0 +1,141 @@
+
+@font-face { font-family: 'Luna';
+             src: url('../other/Luna.ttf') format('truetype'); }
+.container {
+  max-width: 960px;
+}
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  bottom: 0;
+}
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+
+
+.ipad{
+  margin-top: 10%;
+  height:auto;
+  width: 100%;
+}
+
+.marketing{
+  margin-top: 10%;
+  height:auto;
+  width: 50%;
+}
+
+.head{
+  top: 45vh;
+  position: relative;
+  text-align: center;
+  font-family: Luna;
+  color: #000;
+}
+
+.iphone{
+  margin-top: 10%;
+  height:auto;
+  width: 50%;
+}
+
+.ipod{
+  margin-top: 10%;
+  height:auto;
+  width: 50%;
+}
+
+.sierranevada{
+    background: url('../images/SierraNevada.png') no-repeat fixed;
+}
+
+.elcapitan{
+    background: url('../images/ElCapitan.png') no-repeat fixed;
+}
+
+.yosemite{
+    background: url('../images/Yosemite.png') no-repeat fixed;
+}
+.yosemite3{
+    background: url('../images/Yosemite3.png') no-repeat fixed;
+}
+.yosemite4{
+    background: url('../images/Yosemite4.png') no-repeat fixed;
+}
+.elcapitan2{
+    background: url('../images/ElCapitan2.png') no-repeat fixed;
+}
+
+.overflow-hidden { overflow: hidden; }
+
+.parallax{
+  background-size: cover;
+  height: 100vh;
+}
+
+.navimages{
+  max-height: 15vh;
+}
+
+.imac{
+  margin-top: 10%;
+  height:85%;
+}
+
+.macbook{
+  margin-top: 10%;
+  height:95%;
+}
+
+.productnav{
+  height: 22vh;
+}
+
+.bg-dark{
+  background-color: rgba(0, 0, 0, .85)!important;
+}
+
+.icondescription{
+  margin-top: 2vh;
+  color: #000;
+  font-weight: lighter;
+  font-size: 2vh;
+  text-align: center;
+}
+
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}

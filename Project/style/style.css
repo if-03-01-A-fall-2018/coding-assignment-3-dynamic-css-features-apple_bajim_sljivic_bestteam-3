@@ -28,13 +28,14 @@
     flex: 1;
   }
 }
-
-
-
 .ipad{
   margin-top: 10%;
   height:auto;
   width: 100%;
+}
+
+.macbook1{
+  background: url('../images/macbook1.png') no-repeat fixed;
 }
 
 .marketing{
@@ -84,10 +85,18 @@
     background: url('../images/ElCapitan2.png') no-repeat fixed;
 }
 
+.imac1{
+  background: url('../images/imac1.PNG') no-repeat fixed;
+  background-size: cover;
+}
+
+.applewatch{
+  margin-top: 10%;
+  height:85%;
+}
 .overflow-hidden { overflow: hidden; }
 
 .parallax{
-  background-size: cover;
   height: 100vh;
 }
 
@@ -107,6 +116,9 @@
 
 .productnav{
   height: 22vh;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .bg-dark{
@@ -121,21 +133,18 @@
   text-align: center;
 }
 
-input[type=text] {
-  width: 130px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  background-image: url('searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
+.timeline dt{
+  font-size: 150%;
+}
+.content{
+  padding-left: 2vw;
+  border-left: 6px solid black;
+  height: 100%;
+  position: inherit;
+  margin-left: 6%;
 }
 
-input[type=text]:focus {
-  width: 100%;
+.apps{
+  margin-top: 10%;
+  height:95%;
 }

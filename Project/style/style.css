@@ -152,6 +152,17 @@
   height:95%;
 }
 
+.timeline-line{
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.timeline-years{
+    background-color: rgba(0, 0, 0, .85);
+    border: 1px solid rgba(0, 0, 0, .85);
+    width: 2%;
+    height: 2%;
+}
+
 .productnav{
   height: 22vh;
   margin-top: 1rem;
@@ -172,11 +183,13 @@
 }
 
 .content{
-  border-left: 3px solid black;
-  height: 100%;
+  border-top: 3px solid black;
+  width: 100%;
   position: inherit;
-  margin-left: 6%;
-  margin-right: 0;
+  max-width: 88%;
+  margin-top: 1.5%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .apps{

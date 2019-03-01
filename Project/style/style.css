@@ -20,6 +20,7 @@
 
 #timeline > li{
   margin-left: -26.5px;
+  list-style-type: none;
 }
 
 @keyframes slide {
@@ -130,6 +131,9 @@
   height: 100vh;
 
 }
+.max-width{
+    max-width: 100%!important;
+}
 
 .navimages{
   max-height: 15vh;
@@ -154,13 +158,14 @@
 
 .timeline-line{
   background-color: rgba(0, 0, 0, 0);
+  padding: 0!important;
 }
 
 .timeline-years{
-    background-color: rgba(0, 0, 0, .85);
-    border: 1px solid rgba(0, 0, 0, .85);
-    width: 2%;
-    height: 2%;
+  margin: 0px auto 0px auto;
+  border-radius: 250px;
+  border: 5px solid #000;
+  margin-top:-5px;
 }
 
 .productnav{

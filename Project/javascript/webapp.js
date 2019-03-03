@@ -169,8 +169,12 @@ var products=[
       releaseDate: 'September 2018'
     }
   ]
+  [
+
+  ]
 
 ];
+
 function hideSelect() {
   var selectedIndex=document.getElementById("Products").selectedIndex-1;
   if(selectedIndex!==-1)
@@ -186,13 +190,13 @@ function hideSelect() {
   }
 }
 
-function showFacts1(){
+function showFacts(select){
   var selectedIndex=document.getElementById("Products").selectedIndex-1;
-  var selectedModel=document.getElementById('model1').selectedIndex;
-  var facts=document.getElementById('facts1');
+  var selectedModel=document.getElementById('model'+select).selectedIndex;
+  var facts=document.getElementById('facts'+select);
   if(selectedModel!==0)
   {
-    document.getElementById('header1').innerHTML=products[selectedIndex][selectedModel].model;
+    document.getElementById('header'+select).innerHTML=products[selectedIndex][selectedModel].model;
     var out="";
     for (var p in products[selectedIndex][selectedModel]) {
       if(p!=='model')
@@ -204,35 +208,3 @@ function showFacts1(){
     facts.innerHTML=out;
   }
 }
-
-function showFacts2(){
-  var selectedIndex=document.getElementById("Products").selectedIndex-1;
-  var selectedModel=document.getElementById('model2').selectedIndex;
-  var facts=document.getElementById('facts2');
-  if(selectedModel!==0)
-  {
-    document.getElementById('header2').innerHTML=products[selectedIndex][selectedModel].model;
-    var out="";
-    for (var p in products[selectedIndex][selectedModel]) {
-      if(p!=='model')
-      {
-        console.log(p);
-        out += products[selectedIndex][selectedModel][p] + '</br>';
-      }
-    }
-    facts.innerHTML=out;
-  }
-
-}
-
-document.addEventListener('DOMContentLoaded',function() {
-    document.querySelector('select[name="product"]').onchange=hideSelect;
-},false);
-
-document.addEventListener('DOMContentLoaded',function() {
-    document.querySelector('select[name="model1"]').onchange=showFacts1;
-},false);
-
-document.addEventListener('DOMContentLoaded',function() {
-    document.querySelector('select[name="model2"]').onchange=showFacts2;
-},false);

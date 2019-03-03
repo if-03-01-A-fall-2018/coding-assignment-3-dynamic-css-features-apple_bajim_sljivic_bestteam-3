@@ -1,6 +1,5 @@
+@font-face { font-family: 'Luna'; src: url('../other/Luna.ttf') format('truetype'); }
 
-@font-face { font-family: 'Luna';
-             src: url('../other/Luna.ttf') format('truetype'); }
 .container {
   max-width: 960px;
 }
@@ -9,43 +8,15 @@
   background-color: rgba(0, 0, 0, .85);
   bottom: 0;
 }
+
 .site-header a {
   color: #999;
   transition: ease-in-out color .15s;
 }
+
 .site-header a:hover {
   color: #fff;
   text-decoration: none;
-}
-#triangle{
-  width: 0;
-  height: 0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-left: 10px solid black;
-  float: right;
-  margin-top: -14px;
-  margin-right: -5px;
-}
-#triangleYear{
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 0 10px 8px 10px;
-  border-color: transparent transparent rgba(0, 0, 0, .85) transparent;
-  margin-top: 20px;
-  display: none;
-}
-
-#timeline{
-  padding: 0!important;
-  margin-bottom: 0!important;
-  margin-top: -16px;
-}
-
-#timeline > li{
-  list-style-type: none;
-  display: none;
 }
 
 @keyframes slide {
@@ -102,16 +73,6 @@
 
 .head>h1{
   transition-duration: 0.3s;
-}
-
-#hoverYear{
-  background-color: rgba(0, 0, 0, .85);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  max-width: 40px;
-  display: none;
-  margin-top: -40px;
 }
 
 .head>h1:hover{
@@ -192,30 +153,6 @@
   height:95%;
 }
 
-.timelinetext{
-  margin: 0!important;
-  margin-top: 16px!important;
-  text-align: left!important;
-  border-radius: 20px;
-}
-
-.timeline-line{
-  background-color: rgba(0, 0, 0, 0);
-  padding: 0!important;
-}
-
-.timeline-years{
-  margin: 0px auto 0px auto;
-  border-radius: 250px;
-  border: 5px solid #000;
-  margin-top:-6px;
-
-}
-
-.timeline-years:hover{
-  cursor: pointer;
-}
-
 .productnav{
   height: 22vh;
   margin-top: 1rem;
@@ -233,16 +170,6 @@
   font-weight: lighter;
   font-size: 2vh;
   text-align: center;
-}
-
-.content{
-  border-top: 3px solid black;
-  width: 100%;
-  position: inherit;
-  max-width: 88%;
-  margin-top: 40px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .apps{

@@ -29,11 +29,10 @@
         </article>
     </nav>
 
-
     <article class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" id="selectProduct">
         <section class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden remove">
           <section class="select-style select-color">
-            <select id="Products" name="product">
+            <select id="Products" name="product" onchange="hideSelect()">
               <option>Please choose a product.</option>
               <option>iPhone</option>
               <option>Mac</option>
@@ -49,7 +48,7 @@
     <article class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" id="iPhoneSelction">
         <section class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
             <section class="select-style">
-              <select id="model1" name="model1"></select>
+              <select id="model1" name="model1" onchange="showFacts('1')"></select>
             </section>
             <img id="pic1">
             <h2 id="header1"></h2>
@@ -57,7 +56,7 @@
         </section>
         <section class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
             <section class="select-style">
-              <select id="model2" name="model2"></select>
+              <select id="model2" name="model2" onchange="showFacts('2')"></select>
             </section>
             <img id="pic2">
             <h2 id="header2"></h2>

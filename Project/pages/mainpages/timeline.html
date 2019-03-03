@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../style/bootstrap-4.1.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../style/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
   </head>
 
   <body>
@@ -30,198 +31,266 @@
 
     <article class="content">
       <nav class="site-header sticky-top py-1 timeline-line">
+          <article id="hoverYear"><p id="hoverText"></p></article>
           <article class="container d-flex flex-column flex-md-row justify-content-between max-width">
-            <a href="#"class="timeline-years" id="1976" onclick=""></a>
-            <a href="#"class="timeline-years" id="1977"></a>
-            <a href="#"class="timeline-years" id="1978"></a>
-            <a href="#"class="timeline-years" id="1979"></a>
-            <a href="#"class="timeline-years" id="1980"></a>
-            <a href="#"class="timeline-years" id="1981"></a>
-            <a href="#"class="timeline-years" id="1982"></a>
-            <a href="#"class="timeline-years" id="1983"></a>
-            <a href="#"class="timeline-years" id="1984"></a>
-            <a href="#"class="timeline-years" id="1985"></a>
-            <a href="#"class="timeline-years" id="1987"></a>
-            <a href="#"class="timeline-years" id="1991"></a>
-            <a href="#"class="timeline-years" id="1994"></a>
-            <a href="#"class="timeline-years" id="1994"></a>
-            <a href="#"class="timeline-years" id="1995"></a>
-            <a href="#"class="timeline-years" id="1996"></a>
-            <a href="#"class="timeline-years" id="1997"></a>
-            <a href="#"class="timeline-years" id="1998"></a>
-            <a href="#"class="timeline-years" id="1999"></a>
-            <a href="#"class="timeline-years" id="2000"></a>
-            <a href="#"class="timeline-years" id="2001"></a>
-            <a href="#"class="timeline-years" id="2003"></a>
-            <a href="#"class="timeline-years" id="2004"></a>
-            <a href="#"class="timeline-years" id="2005"></a>
-            <a href="#"class="timeline-years" id="2006"></a>
-            <a href="#"class="timeline-years" id="2007"></a>
-            <a href="#"class="timeline-years" id="2008"></a>
-            <a href="#"class="timeline-years" id="2010"></a>
-            <a href="#"class="timeline-years" id="2011"></a>
-            <a href="#"class="timeline-years" id="2012"></a>
-            <a href="#"class="timeline-years" id="2014"></a>
-            <a href="#"class="timeline-years" id="2015"></a>
-            <a href="#"class="timeline-years" id="2016"></a>
+            <a class="timeline-years" onclick="showYear(0, '1976')" onmouseover="hoverYear(0, '1976')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(1, '1977')" onmouseover="hoverYear(1, '1977')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(2, '1978')" onmouseover="hoverYear(2, '1978')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(3, '1979')" onmouseover="hoverYear(3, '1979')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(4, '1980')" onmouseover="hoverYear(4, '1980')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(5, '1981')" onmouseover="hoverYear(5, '1981')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(6, '1982')" onmouseover="hoverYear(6, '1982')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(7, '1983')" onmouseover="hoverYear(7, '1983')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(8, '1984')" onmouseover="hoverYear(8, '1984')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(9, '1985')" onmouseover="hoverYear(9, '1985')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(10, '1987')" onmouseover="hoverYear(10, '1987')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(11, '1991')" onmouseover="hoverYear(11, '1991')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(12, '1995')" onmouseover="hoverYear(12, '1995')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(13, '1996')" onmouseover="hoverYear(13, '1996')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(14, '1997')" onmouseover="hoverYear(14, '1997')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(15, '1998')" onmouseover="hoverYear(15, '1998')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(16, '1999')" onmouseover="hoverYear(16, '1999')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(17, '2000')" onmouseover="hoverYear(17, '2000')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(18, '2001')" onmouseover="hoverYear(18, '2001')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(19, '2003')" onmouseover="hoverYear(19, '2003')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(20, '2004')" onmouseover="hoverYear(20, '2004')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(21, '2005')" onmouseover="hoverYear(21, '2005')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(22, '2006')" onmouseover="hoverYear(22, '2006')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(23, '2007')" onmouseover="hoverYear(23, '2007')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(24, '2008')" onmouseover="hoverYear(24, '2008')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(25, '2010')" onmouseover="hoverYear(25, '2010')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(26, '2011')" onmouseover="hoverYear(26, '2011')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(27, '2012')" onmouseover="hoverYear(27, '2012')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(28, '2014')" onmouseover="hoverYear(28, '2014')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(29, '2015')" onmouseover="hoverYear(29, '2015')" onmouseout="hideYear()"></a>
+            <a class="timeline-years" onclick="showYear(30, '2016')" onmouseover="hoverYear(30, '2016')" onmouseout="hideYear()"></a>
           </article>
+          <section id="triangle"></section>
+          <article id="triangleYear"></article>
       </nav>
       <ul id="timeline">
-      <li id="1976">
-        <h2>1976</h2>
-        <p>Apple's history begins in the garage of Steve Jobs' childhood home in Los Altos, California, where Steve Wozniak and Jobs tested -- but designed elsewhere -- the first Apple I computers, which they later introduced at the Homebrew Computer Club. The Byte Shop places 50 orders. The computer later sells for $666.66. </p>
-        <p>Ronald Wayne designs the first Apple company logo, and prepares the trio's first partnership agreement, but relinquishes his 10% stake in the Apple Computer Company for $800 just twelve days later to avoid the potential financial risk. Wayne has assets that creditors could seize if the partnership becomes indebted. </p>
-      </li>
-      <li id="1977">
-        <h2>1977</h2>
-        <p>Apple Computer Inc. incorporates on January 3, 1977. </p>
-        <p>Apple introduces its first successful product, the Apple II computer, for $1,298 after multimillionaire Mike Markkula invests $92,000 in the company. Markkula also helps Apple secure credit and additional venture capital, and recruited Michael Scott from National Semiconductor to be Apple's first CEO. </p>
-      </li>
-      <li id="1978">
-        <h2>1978</h2>
-        <p>Apple begins development of the unsuccessful Apple III.</p>
-      </li id="1979">
-      <li>
-        <h2>1979</h2>
-        <p>Jef Raskin, a human interface expert who joined Apple a year prior, receives approval to begin work on the Macintosh project. Raskin names the computer after the McIntosh apple, his favorite fruit. The Lisa Project, another personal computer, also begins under Ken Rothmuller, with a projected shipping date of 1981. </p>
-      </li>
-      <li id="1980">
-        <h2>1980</h2>
-        <p>Apple launches its IPO and becomes a publicly traded company on December 12, 1980, selling 4.2 million shares for $22 each. The company generates more capital, and instant millionaires, than any IPO since Ford Motor Company in 1956. Apple continues to trade on the NASDAQ under the stock ticker AAPL today.</p>
-      </li>
-      <li id="1981">
-        <h2>1981</h2>
-        <p>IBM introduces a low-spec PC for $1,565, and eclipses Apple's market share within two years, as the Apple Lisa misses its shipping target. Apple experiences its first internal shakeup, with Markkula replacing Scott as president, Jobs becoming chairman, and Wozniak taking a leave of absence. </p>
-      </li>
-      <li id="1982">
-        <h2>1982</h2>
-        <p>Steve Jobs is forced out of the Lisa project and takes over control of the Macintosh project from Jef Raskin, who subsequently resigns. </p>
-      </li>
-      <li id="1983">
-        <h2>1983</h2>
-        <p>Apple launches the Lisa on January 19, 1983, but sells only 100,000 units due to the personal computer's expensive $9,995 price tag, compatibility issues, and perceived slow performance among consumers due to the Motorola 68000 processor's difficulty in running the complex Lisa operating system.</p>
-        <p>Steve Jobs convinces John Sculley, then president of Pepsi-Cola, to join Apple as president and CEO on April 8, 1983. Sculley was convinced after Jobs asked him the following: "Do you want to sell sugared water for the rest of your life? Or do you want to come with me and change the world?" </p>
-      </li>
-      <li id="1984">
-        <h2>1984</h2>
-        <p>Apple's iconic "1984" commercial airs during a break in the third quarter of Super Bowl XVIII on January 22, 1984. The one-minute spot, based on George Orwell's novel of the same name, introduces the original Macintosh. The ad's intended message is Macintosh combating the conformity of "Big Brother," sometimes interpreted as IBM. </p>
-        <p>Steve Jobs introduces the Macintosh at Apple's annual shareholders meeting on January 24, 1984 for $2,495.</p>
-      </li>
-      <li id="1985">
-        <h2>1985</h2>
-        <p> Steve Jobs resigns from Apple on September 16, 1985 following an internal power struggle with Apple's Board of Directors and then-CEO John Sculley. Jobs founds NeXT Computer with other former Apple employees later in the year. </p>
-      </li>
-      <li id="1987">
-        <h2>1987</h2>
-        <p>Microsoft releases the first version of Windows to much disappointment. </p>
-      </li>
-      <li id="1991">
-        <h2>1991</h2>
-        <p>Apple and IBM partner on October 2, 1991 to create PowerPC-based computers. </p>
-        <p> Apple releases the PowerBook series on October 21, 1991, a two-decades-earlier precursor to the MacBook Pro. </p>
-      </li>
-      <li id="1993">
-        <h2>1993</h2>
-        <p>John Sculley steps down as Apple CEO in May 1993 and is replaced by Michael Spindler. </p>
-        <p>Apple releases the ill-fated Newton as an early entrant in the PDA market. </p>
-      </li>
-      <li id="1994">
-        <h2>1994</h2>
-        <p>Apple releases its first PowerPC-based desktop computers and notebooks. </p>
-      </li>
-      <li id="1995">
-        <h2>1995</h2>
-        <p>Microsoft releases Windows 95, a major competitor to Mac OS. </p>
-      </li>
-      <li id="1996">
-        <h2>1996</h2>
-        <p>Gil Amelio, a member of Apple's Board of Directors since 1994, succeeds Michael Spindler as Apple CEO on February 2, 1996. </p>
-      </li>
-      <li id="1997">
-        <h2>1997</h2>
-        <p>Apple, still under the leadership of Amelio, finalizes its acquisition of NeXT Computer on February 7, 1997, bringing Steve Jobs back to the company he co-founded as an advisor. </p>
-        <p>Apple is in financial trouble, with its stock reaching a 12-year low in the second quarter. Over the Independence Day weekend, and on the heels of the company losing over $700 million, Jobs convinces Apple's Board of Directors to oust Amelio as CEO. Amelio resigns less than one week later.</p>
-        <p>Steve Jobs is appointed as interim CEO and focuses on simplifying Apple's product lineup and giving importance to talents such as Jony Ive. </p>
-        <p>Apple launches the Apple Online Store on November 10, 1997 based on its new built-to-order product strategy. The website is built using NeXT's WebObjects web application technology acquired earlier in the year. </p>
-      </li>
-      <li id="1998">
-        <h2>1998</h2>
-        <p>Apple announces the iMac on May 6, 1998 as the first consumer-facing product since Steve Jobs returned to the company as interim CEO. The colorful, translucent all-in-one desktop computer, designed by Jony Ive, plays a key role in Apple's rebound from its financial problems of years prior. </p>
-      </li>
-      <li id="1999">
-        <h2>1999</h2>
-        <p>Apple releases the iBook on June 21, 1999 based on the colorful iMac design. The notebook lineup is positioned as a lower-end offering alongside the PowerBook series. The original iBook G3 features a clamshell design with translucent plastic, while the iBook G4 has an opaque white plastic case and keyboard. </p>
-      </li>
-      <li id="2000">
-        <h2>2000</h2>
-        <p>Steve Jobs announces at Macworld that he has elected to be Apple's permanent CEO on January 5, 2000, dropping his "interim" designation. </p>
-      </li>
-      <li id="2001">
-        <h2>2001</h2>
-        <p>Just months after the dot-com collapse, Apple's first two retail stores open in Tysons Corner, Virginia and Glendale, California on May 19, 2001. The two locations welcome over 7,700 people and sell a combined total of $599,000 of merchandise during their first two day weekend. Apple opens over two dozen more retail stores in the U.S. over the following year. </p>
-        <p>Steve Jobs introduces the iTunes media player on January 9, 2001. </p>
-        <p>OS X is released on March 24, 2001 based on the NeXTSTEP platform. </p>
-        <p>Steve Jobs announces the iPod on October 23, 2001 during a low-key event at Apple's Town Hall auditorium, describing the portable media player as a "quantum leap" that allows you to "fit your whole music library in your pocket." The iPod, like the iMac, plays a key role in Apple's turnaround during the 2000s. </p>
-      </li>
-      <li id="2003">
-        <h2>2003</h2>
-        <p>Apple launches the iTunes Store on April 28, 2003 for digital music downloads. </p>
-      </li>
-      <li id="2004">
-        <h2>2004</h2>
-        <p>Apple introduces the iPod mini on January 15, 2004. </p>
-      </li>
-      <li id="2005">
-        <h2>2005</h2>
-        <p>Apple introduces the iPod shuffle on January 11, 2005. </p>
-        <p>Apple introduces the iPod nano on September 7, 2005. </p>
-      </li>
-      <li id="2006">
-        <h2>2006</h2>
-        <p>Apple releases the MacBook Pro with Intel architecture on January 10, 2006. </p>
-        <p>Apple releases the MacBook, the successor to the iBook, on May 16, 2006.</p>
-        <p>Apple and TBWA\Media Arts Lab launch a memorable "Get a Mac" advertising campaign starring actors John Hodgman as PC and Justin Long as Mac. The series of ads, which each begin with "Hello, I'm a Mac" and "I'm a PC," highlight the perceived weaknesses of Windows PCs while promoting Mac as a cooler alternative. </p>
-      </li>
-      <li id="2007">
-        <h2>2007</h2>
-        <p>Steve Jobs famously introduces the iPhone on January 9, 2007 as if it is three separate products: a widescreen iPod with touch controls, a revolutionary mobile phone, and a breakthrough Internet communicator. The crowd erupts in applause upon realizing each are simply features of the smartphone. </p>
-        <p>Apple releases the Apple TV on January 9, 2007. </p>
-        <p>Apple Computer Inc. renames to Apple Inc. on January 9, 2007 to reflect its wider focus on consumer electronics. “The Mac, iPod, Apple TV, and iPhone. Only one of those is a computer. So we’re changing the name," says Steve Jobs. </p>
-        <p>Steve Jobs introduces the iPod touch on September 5, 2007. </p>
-      </li>
-      <li id="2008">
-        <h2>2008</h2>
-        <p>Apple launches MacBook Air on January 29, 2008 as its thinnest notebook ever. </p>
-        <p>Apple launches the App Store on July 10, 2008. </p>
-      </li>
-      <li id="2010">
-        <h2>2010</h2>
-        <p>Following years of speculation, Steve Jobs introduces the iPad on January 27, 2010. The device resembles a larger-sized iPhone with a 9.7-inch multi-touch screen, aluminum unibody, and thin bezels. Apple's iOS device lineup hereafter consists of the iPhone, iPad, and iPod touch. </p>
-      </li>
-      <li id="2011">
-        <h2>2011</h2>
-        <p>Apple passes oil giant ExxonMobil on August 9, 2011 to become the world's most valuable publicly traded company, with a market cap exceeding $337 billion. Apple remains the world's most valuable company today, nearly five years later, despite briefly trading places with Google parent company Alphabet in early February. </p>
-        <p>Steve Jobs passes away on October 5, 2011, one day after Apple introduced the iPhone 4S and Siri, following a lengthy battle with a rare form of pancreatic cancer and other health complications. Apple celebrates his life at its Cupertino campus two weeks later as the public greatly mourns his loss. </p>
-      </li>
-      <li id="2012">
-        <h2>2012</h2>
-        <p>Apple Maps launches on iOS 6 to much criticism, leading to a public apology from Tim Cook and the resignation of iOS software chief Scott Forstall. </p>
-      </li>
-      <li id="2014">
-        <h2>2014</h2>
-        <p>Tim Cook introduces the Apple Watch on September 9, 2014 as the company's first wearable device. The product is developed by a team led by Apple COO Jeff Williams, and the company collected over 18,000 hours of health and fitness data prior to its launch in April 2015. </p>
-        <p>Apple Pay launches in the United States on October 20, 2014. </p>
-      </li>
-      <li id="2015">
-        <h2>2015</h2>
-        <p>Tim Cook introduces Apple Music, the company's first subscription-based streaming music service, at WWDC 2015. Apple Music is compatible with iPhone, iPad, iPod touch, Mac, PC, Apple TV, and Android. The service competes directly with Spotify, Google Play Music, Tidal, and other streaming music platforms. </p>
-      </li>
-      <li id="2016">
-        <h2>2016</h2>
-        <p>Apple releases the iPhone SE and smaller iPad Pro as it battles the FBI over smartphone encryption.</p>
-      </li>
+        <li id="1976">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1976</h2>
+            <p>Apple's history begins in the garage of Steve Jobs' childhood home in Los Altos, California, where Steve Wozniak and Jobs tested -- but designed elsewhere -- the first Apple I computers, which they later introduced at the Homebrew Computer Club. The Byte Shop places 50 orders. The computer later sells for $666.66. </p>
+            <p>Ronald Wayne designs the first Apple company logo, and prepares the trio's first partnership agreement, but relinquishes his 10% stake in the Apple Computer Company for $800 just twelve days later to avoid the potential financial risk. Wayne has assets that creditors could seize if the partnership becomes indebted. </p>
+          </article>
+        </li>
+        <li id="1977">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1977</h2>
+            <p>Apple Computer Inc. incorporates on January 3, 1977. </p>
+            <p>Apple introduces its first successful product, the Apple II computer, for $1,298 after multimillionaire Mike Markkula invests $92,000 in the company. Markkula also helps Apple secure credit and additional venture capital, and recruited Michael Scott from National Semiconductor to be Apple's first CEO. </p>
+          </article>
+        </li>
+        <li id="1978">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1978</h2>
+            <p>Apple begins development of the unsuccessful Apple III.</p>
+          </article>
+        </li>
+        <li id="1979">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1979</h2>
+            <p>Jef Raskin, a human interface expert who joined Apple a year prior, receives approval to begin work on the Macintosh project. Raskin names the computer after the McIntosh apple, his favorite fruit. The Lisa Project, another personal computer, also begins under Ken Rothmuller, with a projected shipping date of 1981. </p>
+          </article>
+        </li>
+        <li id="1980">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1980</h2>
+            <p>Apple launches its IPO and becomes a publicly traded company on December 12, 1980, selling 4.2 million shares for $22 each. The company generates more capital, and instant millionaires, than any IPO since Ford Motor Company in 1956. Apple continues to trade on the NASDAQ under the stock ticker AAPL today.</p>
+          </article>
+        </li>
+        <li id="1981">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1981</h2>
+            <p>IBM introduces a low-spec PC for $1,565, and eclipses Apple's market share within two years, as the Apple Lisa misses its shipping target. Apple experiences its first internal shakeup, with Markkula replacing Scott as president, Jobs becoming chairman, and Wozniak taking a leave of absence. </p>
+          </article>
+        </li>
+        <li id="1982">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1982</h2>
+            <p>Steve Jobs is forced out of the Lisa project and takes over control of the Macintosh project from Jef Raskin, who subsequently resigns. </p>
+          </article>
+        </li>
+        <li id="1983">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1983</h2>
+            <p>Apple launches the Lisa on January 19, 1983, but sells only 100,000 units due to the personal computer's expensive $9,995 price tag, compatibility issues, and perceived slow performance among consumers due to the Motorola 68000 processor's difficulty in running the complex Lisa operating system.</p>
+            <p>Steve Jobs convinces John Sculley, then president of Pepsi-Cola, to join Apple as president and CEO on April 8, 1983. Sculley was convinced after Jobs asked him the following: "Do you want to sell sugared water for the rest of your life? Or do you want to come with me and change the world?" </p>
+          </article>
+        </li>
+        <li id="1984">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1984</h2>
+            <p>Apple's iconic "1984" commercial airs during a break in the third quarter of Super Bowl XVIII on January 22, 1984. The one-minute spot, based on George Orwell's novel of the same name, introduces the original Macintosh. The ad's intended message is Macintosh combating the conformity of "Big Brother," sometimes interpreted as IBM. </p>
+            <p>Steve Jobs introduces the Macintosh at Apple's annual shareholders meeting on January 24, 1984 for $2,495.</p>
+          </article>
+        </li>
+        <li id="1985">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1985</h2>
+            <p> Steve Jobs resigns from Apple on September 16, 1985 following an internal power struggle with Apple's Board of Directors and then-CEO John Sculley. Jobs founds NeXT Computer with other former Apple employees later in the year. </p>
+          </article>
+        </li>
+        <li id="1987">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1987</h2>
+            <p>Microsoft releases the first version of Windows to much disappointment. </p>
+          </article>
+        </li>
+        <li id="1991">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1991</h2>
+            <p>Apple and IBM partner on October 2, 1991 to create PowerPC-based computers. </p>
+            <p> Apple releases the PowerBook series on October 21, 1991, a two-decades-earlier precursor to the MacBook Pro. </p>
+          </article>
+        </li>
+        <li id="1993">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1993</h2>
+            <p>John Sculley steps down as Apple CEO in May 1993 and is replaced by Michael Spindler. </p>
+            <p>Apple releases the ill-fated Newton as an early entrant in the PDA market. </p>
+          </article>
+        </li>
+        <li id="1994">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1994</h2>
+            <p>Apple releases its first PowerPC-based desktop computers and notebooks. </p>
+          </article>
+        </li>
+        <li id="1995">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1995</h2>
+            <p>Microsoft releases Windows 95, a major competitor to Mac OS. </p>
+          </article>
+        </li>
+        <li id="1996">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1996</h2>
+            <p>Gil Amelio, a member of Apple's Board of Directors since 1994, succeeds Michael Spindler as Apple CEO on February 2, 1996. </p>
+          </article>
+        </li>
+        <li id="1997">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1997</h2>
+            <p>Apple, still under the leadership of Amelio, finalizes its acquisition of NeXT Computer on February 7, 1997, bringing Steve Jobs back to the company he co-founded as an advisor. </p>
+            <p>Apple is in financial trouble, with its stock reaching a 12-year low in the second quarter. Over the Independence Day weekend, and on the heels of the company losing over $700 million, Jobs convinces Apple's Board of Directors to oust Amelio as CEO. Amelio resigns less than one week later.</p>
+            <p>Steve Jobs is appointed as interim CEO and focuses on simplifying Apple's product lineup and giving importance to talents such as Jony Ive. </p>
+            <p>Apple launches the Apple Online Store on November 10, 1997 based on its new built-to-order product strategy. The website is built using NeXT's WebObjects web application technology acquired earlier in the year. </p>
+          </article>
+        </li>
+        <li id="1998">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1998</h2>
+            <p>Apple announces the iMac on May 6, 1998 as the first consumer-facing product since Steve Jobs returned to the company as interim CEO. The colorful, translucent all-in-one desktop computer, designed by Jony Ive, plays a key role in Apple's rebound from its financial problems of years prior. </p>
+          </article>
+        </li>
+        <li id="1999">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>1999</h2>
+            <p>Apple releases the iBook on June 21, 1999 based on the colorful iMac design. The notebook lineup is positioned as a lower-end offering alongside the PowerBook series. The original iBook G3 features a clamshell design with translucent plastic, while the iBook G4 has an opaque white plastic case and keyboard. </p>
+          </article>
+        </li>
+        <li id="2000">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2000</h2>
+            <p>Steve Jobs announces at Macworld that he has elected to be Apple's permanent CEO on January 5, 2000, dropping his "interim" designation. </p>
+          </article>
+        </li>
+        <li id="2001">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2001</h2>
+            <p>Just months after the dot-com collapse, Apple's first two retail stores open in Tysons Corner, Virginia and Glendale, California on May 19, 2001. The two locations welcome over 7,700 people and sell a combined total of $599,000 of merchandise during their first two day weekend. Apple opens over two dozen more retail stores in the U.S. over the following year. </p>
+            <p>Steve Jobs introduces the iTunes media player on January 9, 2001. </p>
+            <p>OS X is released on March 24, 2001 based on the NeXTSTEP platform. </p>
+            <p>Steve Jobs announces the iPod on October 23, 2001 during a low-key event at Apple's Town Hall auditorium, describing the portable media player as a "quantum leap" that allows you to "fit your whole music library in your pocket." The iPod, like the iMac, plays a key role in Apple's turnaround during the 2000s. </p>
+          </article>
+        </li>
+        <li id="2003">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2003</h2>
+            <p>Apple launches the iTunes Store on April 28, 2003 for digital music downloads. </p>
+          </article>
+        </li>
+        <li id="2004">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2004</h2>
+            <p>Apple introduces the iPod mini on January 15, 2004. </p>
+          </article>
+        </li>
+        <li id="2005">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2005</h2>
+            <p>Apple introduces the iPod shuffle on January 11, 2005. </p>
+            <p>Apple introduces the iPod nano on September 7, 2005. </p>
+          </article>
+        </li>
+        <li id="2006">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2006</h2>
+            <p>Apple releases the MacBook Pro with Intel architecture on January 10, 2006. </p>
+            <p>Apple releases the MacBook, the successor to the iBook, on May 16, 2006.</p>
+            <p>Apple and TBWA\Media Arts Lab launch a memorable "Get a Mac" advertising campaign starring actors John Hodgman as PC and Justin Long as Mac. The series of ads, which each begin with "Hello, I'm a Mac" and "I'm a PC," highlight the perceived weaknesses of Windows PCs while promoting Mac as a cooler alternative. </p>
+          </article>
+        </li>
+        <li id="2007">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2007</h2>
+            <p>Steve Jobs famously introduces the iPhone on January 9, 2007 as if it is three separate products: a widescreen iPod with touch controls, a revolutionary mobile phone, and a breakthrough Internet communicator. The crowd erupts in applause upon realizing each are simply features of the smartphone. </p>
+            <p>Apple releases the Apple TV on January 9, 2007. </p>
+            <p>Apple Computer Inc. renames to Apple Inc. on January 9, 2007 to reflect its wider focus on consumer electronics. “The Mac, iPod, Apple TV, and iPhone. Only one of those is a computer. So we’re changing the name," says Steve Jobs. </p>
+            <p>Steve Jobs introduces the iPod touch on September 5, 2007. </p>
+          </article>
+        </li>
+        <li id="2008">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2008</h2>
+            <p>Apple launches MacBook Air on January 29, 2008 as its thinnest notebook ever. </p>
+            <p>Apple launches the App Store on July 10, 2008. </p>
+          </article>
+        </li>
+        <li id="2010">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2010</h2>
+            <p>Following years of speculation, Steve Jobs introduces the iPad on January 27, 2010. The device resembles a larger-sized iPhone with a 9.7-inch multi-touch screen, aluminum unibody, and thin bezels. Apple's iOS device lineup hereafter consists of the iPhone, iPad, and iPod touch. </p>
+          </article>
+        </li>
+        <li id="2011">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2011</h2>
+            <p>Apple passes oil giant ExxonMobil on August 9, 2011 to become the world's most valuable publicly traded company, with a market cap exceeding $337 billion. Apple remains the world's most valuable company today, nearly five years later, despite briefly trading places with Google parent company Alphabet in early February. </p>
+            <p>Steve Jobs passes away on October 5, 2011, one day after Apple introduced the iPhone 4S and Siri, following a lengthy battle with a rare form of pancreatic cancer and other health complications. Apple celebrates his life at its Cupertino campus two weeks later as the public greatly mourns his loss. </p>
+          </article>
+        </li>
+        <li id="2012">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2012</h2>
+            <p>Apple Maps launches on iOS 6 to much criticism, leading to a public apology from Tim Cook and the resignation of iOS software chief Scott Forstall. </p>
+          </article>
+        </li>
+        <li id="2014">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2014</h2>
+            <p>Tim Cook introduces the Apple Watch on September 9, 2014 as the company's first wearable device. The product is developed by a team led by Apple COO Jeff Williams, and the company collected over 18,000 hours of health and fitness data prior to its launch in April 2015. </p>
+            <p>Apple Pay launches in the United States on October 20, 2014. </p>
+          </article>
+        </li>
+        <li id="2015">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2015</h2>
+            <p>Tim Cook introduces Apple Music, the company's first subscription-based streaming music service, at WWDC 2015. Apple Music is compatible with iPhone, iPad, iPod touch, Mac, PC, Apple TV, and Android. The service competes directly with Spotify, Google Play Music, Tidal, and other streaming music platforms. </p>
+          </article>
+        </li>
+        <li id="2016">
+          <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white timelinetext">
+            <h2>2016</h2>
+            <p>Apple releases the iPhone SE and smaller iPad Pro as it battles the FBI over smartphone encryption.</p>
+          </article>
+        </li>
       </ul>
     </article>
+    <script src="../../javascript/timeline.js"></script>
 
     <footer class="container py-5">
       <article class="row">

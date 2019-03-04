@@ -17,6 +17,7 @@
   border-color: transparent transparent rgba(0, 0, 0, .85) transparent;
   margin-top: 20px;
   display: none;
+  transition-duration: 1.5s;
 }
 
 #timeline{

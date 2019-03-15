@@ -194,10 +194,15 @@ function showFacts(select){
   var facts=document.getElementById('facts'+select);
   if(selectedModel!==0)
   {
-    if(deleted1==false && select==1 || deleted2==false && select==2)
+    if(deleted1==false && select==1)
     {
       document.getElementById('model'+select).remove(0);
-      deleted=true;
+      deleted1=true;
+    }
+    if(deleted2==false && select==2)
+    {
+      document.getElementById('model'+select).remove(0);
+      deleted2=true;
     }
     document.getElementById('header'+select).innerHTML=products[selectedIndex][selectedModel].model;
     var out="";

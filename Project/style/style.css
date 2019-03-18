@@ -25,7 +25,7 @@
     to {transform: translate(-0px, 0);}
 }
 
-.slide {
+.slideicon {
     font-size: 20px;
     animation-duration: 10s;
     animation-name: slide;

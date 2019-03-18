@@ -1,3 +1,9 @@
-$(window).blur(function() {
-  $(document).attr("title","Come back");
-});
+var save = document.title;
+
+window.onblur = function() {
+  document.title="Come back :c";
+}
+
+window.onfocus = function() {
+  document.title=save;
+}

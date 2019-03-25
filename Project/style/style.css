@@ -31,6 +31,10 @@
   }
 }
 
+.righticon{
+  right: 0%;
+}
+
 .ipad{
   margin-top: 10%;
   height:auto;

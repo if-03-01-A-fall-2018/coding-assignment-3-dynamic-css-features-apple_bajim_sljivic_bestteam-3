@@ -19,20 +19,6 @@
   text-decoration: none;
 }
 
-@keyframes slide {
-    from {transform:translate(0, 0);}
-    50% {transform: translate(960px, 0);}
-    to {transform: translate(-0px, 0);}
-}
-
-.slideicon {
-    font-size: 20px;
-    animation-duration: 10s;
-    animation-name: slide;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
 .flex-equal > * {
   -ms-flex: 1;
   flex: 1;

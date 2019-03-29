@@ -190,18 +190,21 @@ function hideSelect() {
 
 function showFacts(select){
   var selectedIndex=document.getElementById("Products").selectedIndex-1;
-  var selectedModel=document.getElementById('model'+select).selectedIndex;
+  var selectedModel=document.getElementById('model'+select).selectedIndex+1;
   var facts=document.getElementById('facts'+select);
   if(selectedModel!==0)
   {
     if(deleted1==false && select==1)
     {
       document.getElementById('model'+select).remove(0);
+      selectedModel=selectedModel-1;
       deleted1=true;
     }
     if(deleted2==false && select==2)
     {
       document.getElementById('model'+select).remove(0);
+
+      selectedModel=selectedModel-1;
       deleted2=true;
     }
     document.getElementById('header'+select).innerHTML=products[selectedIndex][selectedModel].model;

@@ -32,7 +32,8 @@
 }
 
 .righticon{
-  right: 0%;
+    position: absolute;
+    right: 1%;
 }
 
 .ipad{

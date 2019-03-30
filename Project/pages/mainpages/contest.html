@@ -30,40 +30,45 @@
           <a class="py-2 d-none d-md-inline-block" href="products.html">Products</a>
           <a class="py-2 d-none d-md-inline-block" href="apps.html">Apps</a>
           <a class="py-2 d-none d-md-inline-block" href="comparison.html">Comparison</a>
-          <a class="py-2 d-none d-md-inline-block" href="contest.html"><i class="fas fa-camera"></i></a>
-          <a class="py-2 d-none d-md-inline-block righticon" href="contest.html"><i class="fas fa-question"></i></a>
+          <a class="py-2 d-none d-md-inline-block" href="contest.html"><i class="fas fa-camera"></i></a
         </article>
     </nav>
+    <script src="../../javascript/contest.js"></script>
 
     <div id="demo" class="carousel slide" data-ride="carousel">
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../../images/other/image1.jpeg" alt="Los Angeles" width="100%">
-      <div class="carousel-caption">
-        <h3>Nadia</h3>
-        <p>Is toll!</p>
+        <ul class="carousel-indicators">
+          <li id="left" data-target="#demo" data-slide-to="0" class="active"></li>
+          <li id="right" data-target="#demo" data-slide-to="1"></li>
+        </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../../images/other/image1.jpeg" alt="Los Angeles" width="100%">
+          <div class="carousel-caption">
+            <h3>Nadia</h3>
+            <p>Is toll!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../../images/other/image2.jpeg" alt="Chicago" width="100%">
+          <div class="carousel-caption">
+            <h3>Emina</h3>
+            <p>Is toll!</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="carousel-item">
-      <img src="../../images/other/image2.jpeg" alt="Chicago" width="100%">
-      <div class="carousel-caption">
-        <h3>Emina</h3>
-        <p>Is toll!</p>
-      </div>
-    </div>
-    </div>
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</div>
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+      <p id="thumbs-up" class="voting">0</p>
+      <i id="vote1" class="far fa-thumbs-up voting" onclick="up()"></i>
+      <i id="vote2" class="far fa-thumbs-down voting" onclick="down()"></i>
+      <p id="thumbs-down" class="voting">0</p>
+  </div>
+
+
 
     <footer class="container py-5">
       <article class="row">

@@ -1,6 +1,5 @@
+@font-face { font-family: 'Luna'; src: url('../other/Luna.ttf') format('truetype'); }
 
-@font-face { font-family: 'Luna';
-             src: url('../other/Luna.ttf') format('truetype'); }
 .container {
   max-width: 960px;
 }
@@ -9,31 +8,15 @@
   background-color: rgba(0, 0, 0, .85);
   bottom: 0;
 }
+
 .site-header a {
   color: #999;
   transition: ease-in-out color .15s;
 }
+
 .site-header a:hover {
   color: #fff;
   text-decoration: none;
-}
-
-#timeline > li{
-  margin-left: -26.5px;
-}
-
-@keyframes slide {
-    from {transform:translate(0, 0);}
-    50% {transform: translate(960px, 0);}
-    to {transform: translate(-0px, 0);}
-}
-
-.slide {
-    font-size: 20px;
-    animation-duration: 10s;
-    animation-name: slide;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
 }
 
 .flex-equal > * {
@@ -46,6 +29,11 @@
     -ms-flex: 1;
     flex: 1;
   }
+}
+
+.righticon{
+    position: absolute;
+    right: 1%;
 }
 
 .ipad{
@@ -67,6 +55,7 @@
   font-family: Luna;
   color: #000;
   font-weight: 600;
+  margin-bottom: 30px;
 }
 
 .head>p{
@@ -110,6 +99,11 @@
     background: url('../images/backgrounds/Yosemite3.png') no-repeat fixed;
     background-size: cover;
 }
+
+.yosemite5{
+    background: url('../images/backgrounds/Yosemite5.png') no-repeat fixed;
+    background-size: cover;
+}
 .yosemite4{
     background: url('../images/backgrounds/Yosemite4.png') no-repeat fixed;
     background-size: cover;
@@ -129,6 +123,9 @@
 .parallax{
   height: 100vh;
 
+}
+.max-width{
+    max-width: 100%!important;
 }
 
 .navimages{
@@ -169,14 +166,6 @@
   font-weight: lighter;
   font-size: 2vh;
   text-align: center;
-}
-
-.content{
-  border-left: 3px solid black;
-  height: 100%;
-  position: inherit;
-  margin-left: 6%;
-  margin-right: 0;
 }
 
 .apps{

@@ -14,6 +14,12 @@ window.onload = function (){
   document.getElementById('vote2').style.cssText='left:' + b +'px!important;';
   document.getElementById('thumbs-up').style.cssText='left:' + c +'px!important;';
   document.getElementById('thumbs-down').style.cssText='left:' + d +'px!important;';
+
+  loadPictures();
+}
+
+function loadPictures(){
+  
 }
 
 function up(){

@@ -23,6 +23,7 @@ function up(){
   {
     like=true;
     document.getElementById('vote1').style.color="#32CD32";
+    document.getElementById('thumbs-up').style.color="#32CD32";
     up1++;
     document.getElementById('thumbs-up').innerHTML=up1;
 
@@ -32,10 +33,12 @@ function up(){
     like=true;
     dislike=false;
     document.getElementById('vote2').style.color="#fff";
+    document.getElementById('thumbs-down').style.color="#fff";
     down1--;
     document.getElementById('thumbs-down').innerHTML=down1;
     like=true;
     document.getElementById('vote1').style.color="#32CD32";
+    document.getElementById('thumbs-up').style.color="#32CD32";
     up1++;
     document.getElementById('thumbs-up').innerHTML=up1;
   }
@@ -50,6 +53,7 @@ function down(){
   {
     dislike=true;
     document.getElementById('vote2').style.color="#FF0000";
+    document.getElementById('thumbs-down').style.color="#FF0000";
     down1++;
     document.getElementById('thumbs-down').innerHTML=down1;
   }if(dislike===false && like===true)
@@ -57,9 +61,11 @@ function down(){
     dislike=true;
     like=false;
     document.getElementById('vote1').style.color="#fff";
+    document.getElementById('thumbs-up').style.color="#fff";
     up1--;
     document.getElementById('thumbs-up').innerHTML=up1;
     document.getElementById('vote2').style.color="#FF0000";
+    document.getElementById('thumbs-down').style.color="#FF0000";
     down1++;
     document.getElementById('thumbs-down').innerHTML=down1;
   }

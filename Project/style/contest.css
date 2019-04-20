@@ -28,3 +28,9 @@
 #vote2{
   cursor: pointer;
 }
+
+#password{
+  outline: none;
+  border: none;
+  cursor: default;
+}

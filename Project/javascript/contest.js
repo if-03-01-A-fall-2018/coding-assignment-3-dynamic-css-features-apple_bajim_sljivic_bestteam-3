@@ -3,28 +3,97 @@ var down1=0;
 var like=false;
 var dislike=false;
 
+var pics=[{
+      path: "../../images/other/image1.jpeg",
+      title: "Nadia",
+      subtitle: "is toll",
+      likes:0,
+      dislike:0,
+      liked:false,
+      disliked:false,
+  },
+  {
+        path: "../../images/other/image1.jpeg",
+        title: "Nadia",
+        subtitle: "is toll",
+        likes:0,
+        dislike:0,
+        liked:false,
+        disliked:false,
+    },
+    {
+          path: "../../images/other/image1.jpeg",
+          title: "Nadia",
+          subtitle: "is toll",
+          likes:0,
+          dislike:0,
+          liked:false,
+          disliked:false,
+      },
+  {
+      path: "../../images/other/image2.jpeg",
+      title: "Emina",
+      subtitle: "is toll",
+      likes:0,
+      dislike:0,
+      liked:false,
+      disliked:false,
+  },
+]
+
 window.onload = function (){
-  var left =  document.getElementById('left').offsetLeft;
-  var right =  document.getElementById('right').offsetLeft;
-  var a = window.innerWidth/2-70;
-  var b = window.innerWidth/2+40;
-  var c = window.innerWidth/2-85;
-  var d = window.innerWidth/2+60;
+
+    loadPictures();
+  var left =  document.getElementById('left').offsetLeft + document.getElementById('margin').offsetWidth;
+  var right =  document.getElementById('right').offsetLeft +document.getElementById('margin').offsetWidth;
+  console.log(document.getElementById('margin').offsetWidth);
+  console.log(right);
+  console.log(left);
+  var a = left-20 ;
+  var b = right + 40;
+  var c = left - 35;
+  var d = right +60;
   document.getElementById('vote1').style.cssText='left:' + a +'px!important;';
   document.getElementById('vote2').style.cssText='left:' + b +'px!important;';
   document.getElementById('thumbs-up').style.cssText='left:' + c +'px!important;';
   document.getElementById('thumbs-down').style.cssText='left:' + d +'px!important;';
 
-  loadPictures();
 }
 
+$('#Carousel').on('slide.bs.carousel', function (ev) {
+  var id = ev.relatedTarget.id;
+
+  document.getElementById('thumbs-up').innerHTML=pics[id].likes;
+
+    document.getElementById('thumbs-down').innerHTML=pics[id].dislike;
+
+})
+
 function loadPictures(){
-  
+  var section = document.getElementsByClassName("carousel-inner");
+  var text="<div class=\"carousel-item active\"> <img src=\""+pics[0].path +"\" width=\"100%\"> <div class=\"carousel-caption\"> <h3>" + pics[0].title +"</h3> <p>"+pics[0].subtitle+"</p></div></div>";
+
+  for (var i = 1; i < pics.length; i++) {
+      text+="<div class=\"carousel-item\"> <img src=\""+pics[i].path +"\" width=\"100%\"> <div class=\"carousel-caption\"> <h3>" + pics[i].title +"</h3> <p>"+pics[i].subtitle+"</p></div></div>";
+  }
+  section[0].innerHTML=text;
+
+  section=document.getElementsByClassName("carousel-indicators");
+  text="<li id=\"left\" data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>";
+
+  for (var i = 1; i < pics.length; i++) {
+    if(i==pics.length-1)
+    {
+      text+="<li id=\"right\" data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>";
+    }
+    else{
+    text+="<li data-target=\"#demo\" data-slide-to=\""+ i + "\"></li>";
+    }
+  }
+  section[0].innerHTML=text;
 }
 
 function up(){
-  console.log(like);
-  console.log(dislike);
   if(like===false && dislike===false)
   {
     like=true;
@@ -48,13 +117,9 @@ function up(){
     up1++;
     document.getElementById('thumbs-up').innerHTML=up1;
   }
-    console.log(like);
-    console.log(dislike);
 }
 
 function down(){
-  console.log(like);
-  console.log(dislike);
   if(dislike===false && like===false)
   {
     dislike=true;
@@ -75,6 +140,4 @@ function down(){
     down1++;
     document.getElementById('thumbs-down').innerHTML=down1;
   }
-    console.log(like);
-    console.log(dislike);
 }

@@ -76,7 +76,7 @@ var pics=[{
             lastName: "Sljivic",
           },
           {
-              path: "../../contest/pic2.jpg",
+              path: "../../contest/pic5.jpg",
               modle: "Iphone7",
               description: "is toll",
               likes:0,
@@ -88,7 +88,7 @@ var pics=[{
               lastName: "Sljivic",
           },
           {
-              path: "../../contest/pic2.jpg",
+              path: "../../contest/pic6.jpg",
               modle: "Iphone7",
               description: "is toll",
               likes:0,
@@ -100,7 +100,20 @@ var pics=[{
               lastName: "Sljivic",
           },
           {
-              path: "../../contest/pic2.jpg",
+              path: "../../contest/pic7.jpg",
+              modle: "Iphone7",
+              description: "is toll",
+              likes:0,
+              dislike:0,
+              liked:false,
+              disliked:false,
+              aproved:true,
+              firstName: "Emina",
+              lastName: "Sljivic",
+          },
+
+          {
+              path: "../../contest/pic8.jpg",
               modle: "Iphone7",
               description: "is toll",
               likes:0,

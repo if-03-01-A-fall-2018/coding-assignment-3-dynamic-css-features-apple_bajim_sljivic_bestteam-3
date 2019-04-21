@@ -32,3 +32,12 @@
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
+.card:hover{
+  opacity: 0.5;
+}
+
+.card{
+
+  transition: .5s ease;
+}

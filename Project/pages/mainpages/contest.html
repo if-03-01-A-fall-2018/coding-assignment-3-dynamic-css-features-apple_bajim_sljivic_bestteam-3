@@ -35,6 +35,23 @@
     </nav>
     <script src="../../javascript/contest.js"></script>
 
+    <article id="submition">
+      <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white">
+        <section class="col-md-5 p-lg-5 mx-auto my-5">
+          <h1 class="display-4 font-weight-normal">CALL FOR ENTRIES</h1>
+          <p class="lead font-weight-normal">Our aim is to discover the best phone camera. Send us your picture and let the people discide if yours was the best! Have fun! <3</p>
+          <button type="button" class="btn btn-outline-secondary bg-light" data-toggle="modal" data-target=".bd-example-modal-xl">Submition</button>
+          <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <h1 style="color:#000">ey</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </article>
+
     <div id="demo" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
         </ul>
@@ -51,6 +68,9 @@
       <i id="vote2" class="far fa-thumbs-down voting" onclick="down()"></i>
       <p id="thumbs-down" class="voting"></p>
   </div>
+
+  <article id="list">
+  </article>
 
     <footer class="container py-5">
       <article class="row">
@@ -93,6 +113,9 @@
         </section>
       </article>
     </footer>
-    <input id="password" type="text" name="password">
+    <input id="password" class="password" type="text" name="password">
+    <input class="password" type="button" onclick="showList()">
+
+    <input class="password" id="back" type="button" onclick="goBack()">
   </body>
 </html>

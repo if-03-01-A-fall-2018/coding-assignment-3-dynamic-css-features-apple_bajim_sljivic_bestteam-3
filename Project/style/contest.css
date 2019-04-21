@@ -28,8 +28,34 @@
   cursor: pointer;
 }
 
-#password{
+.password{
   outline: none;
   border: none;
   cursor: default;
+  background-color: #fff;
+}
+
+#demo{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.littlepics{
+  height: 20%;
+  width: 20%;
+  float: left;
+}
+
+.bg-dark{
+  padding: 16px !important;
+}
+
+.description{
+  margin: 0;
+  font-size: 20%;
+}
+
+#back{
+  right: 0;
+  position: absolute;
 }

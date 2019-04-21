@@ -177,7 +177,7 @@ $('#gallery').append(allImages);
   var text='';
 
   for (var i = 0; i < pictures.length; i++) {
-      text+= "<section class=\"card\"> <img class=\"card-img-top img-fluid\" src=\""+ pictures[i].path +"\"> </section>";
+      text+= "<section class=\"card\"> <img id=\"pic"+ i +"\" class=\"card-img-top img-fluid\" src=\""+ pictures[i].path +"\"> </section>";
       console.log("ey");
   }
 

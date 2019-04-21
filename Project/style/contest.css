@@ -1,32 +1,4 @@
-.voting{
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-    left: 0;
-    z-index: 15;
-    justify-content: center;
-    padding-left: 0;
-    margin: 0;
-    margin-bottom: 5px;
-    height: 20px;
-    color: #fff;
-}
 
-#thumbs-up{
-  margin-bottom: 8px;
-}
-
-#thumbs-down{
-  margin-bottom: 10px;
-}
-
-#vote1{
-  cursor: pointer;
-}
-
-#vote2{
-  cursor: pointer;
-}
 
 .password{
   outline: none;
@@ -35,10 +7,6 @@
   background-color: #fff;
 }
 
-#demo{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
 
 .littlepics{
   height: 20%;
@@ -58,4 +26,31 @@
 #back{
   right: 0;
   position: absolute;
+}
+
+#gallery{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+
+.row {
+ -moz-column-width: 18em;
+ -webkit-column-width: 18em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em;
+
+}
+
+.item {
+ display: inline-block;
+ padding:  .25rem;
+ width:  100%;
+}
+
+.well {
+ position:relative;
+ display: block;
 }

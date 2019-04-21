@@ -4,7 +4,7 @@ var like=false;
 var dislike=false;
 
 var pics=[{
-    path: "../../images/other/image2.jpeg",
+    path: "../../contest/pic1.jpg",
     modle: "Iphone7",
     description: "is toll",
     likes:0,
@@ -16,69 +16,107 @@ var pics=[{
     lastName: "Sljivic",
   },
   {
-        path: "../../images/other/image1.jpeg",
-        modle: "Nadia",
+      path: "../../contest/pic2.jpg",
+      modle: "Iphone7",
+      description: "is toll",
+      likes:0,
+      dislike:0,
+      liked:false,
+      disliked:false,
+      aproved:true,
+      firstName: "Emina",
+      lastName: "Sljivic",
+  },
+  {
+      path: "../../contest/pic3.jpg",
+      modle: "Iphone7",
+      description: "is toll",
+      likes:0,
+      dislike:0,
+      liked:false,
+      disliked:false,
+      aproved:true,
+      firstName: "Emina",
+      lastName: "Sljivic",
+    },
+    {
+        path: "../../contest/pic4.jpg",
+        modle: "Iphone7",
         description: "is toll",
         likes:0,
         dislike:0,
         liked:false,
         disliked:false,
         aproved:true,
-        firstName: "Nadia",
-        lastName: "Bajim",
-    },
-    {
+        firstName: "Emina",
+        lastName: "Sljivic",
+      },
+      {
           path: "../../images/other/image1.jpeg",
-          modle: "Nadia2",
+          modle: "Iphone7",
           description: "is toll",
           likes:0,
           dislike:0,
           liked:false,
           disliked:false,
-          aproved:false,
-          firstName: "Selma",
-          lastName: "Bacinovic",
-      },
+          aproved:true,
+          firstName: "Emina",
+          lastName: "Sljivic",
+        },
+        {
+            path: "../../images/other/image2.jpeg",
+            modle: "Iphone7",
+            description: "is toll",
+            likes:0,
+            dislike:0,
+            liked:false,
+            disliked:false,
+            aproved:true,
+            firstName: "Emina",
+            lastName: "Sljivic",
+          },
+          {
+              path: "../../contest/pic2.jpg",
+              modle: "Iphone7",
+              description: "is toll",
+              likes:0,
+              dislike:0,
+              liked:false,
+              disliked:false,
+              aproved:true,
+              firstName: "Emina",
+              lastName: "Sljivic",
+          },
+          {
+              path: "../../contest/pic2.jpg",
+              modle: "Iphone7",
+              description: "is toll",
+              likes:0,
+              dislike:0,
+              liked:false,
+              disliked:false,
+              aproved:true,
+              firstName: "Emina",
+              lastName: "Sljivic",
+          },
+          {
+              path: "../../contest/pic2.jpg",
+              modle: "Iphone7",
+              description: "is toll",
+              likes:0,
+              dislike:0,
+              liked:false,
+              disliked:false,
+              aproved:true,
+              firstName: "Emina",
+              lastName: "Sljivic",
+          },
+
 ]
 
 window.onload = function (){
   loadPictures();
-  var left =  document.getElementsByClassName('left')[0].offsetLeft + document.getElementById('margin').offsetWidth;
-  var right =  document.getElementsByClassName('right')[0].offsetLeft +document.getElementById('margin').offsetWidth;
-  var a = left-20 ;
-  var b = right + 40;
-  var c = left - 35;
-  var d = right +60;
-  document.getElementById('vote1').style.cssText='left:' + a +'px!important;';
-  document.getElementById('vote2').style.cssText='left:' + b +'px!important;';
-  document.getElementById('thumbs-up').style.cssText='left:' + c +'px!important;';
-  document.getElementById('thumbs-down').style.cssText='left:' + d +'px!important;';
-
-
 }
-
-window.onresize = function (){
-  var left =  document.getElementsByClassName('left')[0].offsetLeft + document.getElementById('margin').offsetWidth;
-  var right =  document.getElementsByClassName('right')[0].offsetLeft +document.getElementById('margin').offsetWidth;
-  var a = left-20 ;
-  var b = right + 40;
-  var c = left - 35;
-  var d = right +60;
-  document.getElementById('vote1').style.cssText='left:' + a +'px!important;';
-  document.getElementById('vote2').style.cssText='left:' + b +'px!important;';
-  document.getElementById('thumbs-up').style.cssText='left:' + c +'px!important;';
-  document.getElementById('thumbs-down').style.cssText='left:' + d +'px!important;';
-
-}
-
-$('#Carousel').on('slide.bs.carousel', function (ev) {
-  var id = ev.relatedTarget.id;
-
-  document.getElementById('thumbs-up').innerHTML=pics[id].likes;
-
-    document.getElementById('thumbs-down').innerHTML=pics[id].dislike;
-
-})
 
 function getLenghtOfAproved(){
   var count=0;
@@ -105,60 +143,34 @@ function getAprovedArray(){
   return aproved;
 }
 
-function loadPictures(){
-  pictures=getAprovedArray();
-  var section = document.getElementsByClassName("carousel-inner");
-  var text="<div class=\"carousel-item active\"> <img src=\""+pictures[0].path +"\" width=\"100%\"> <div class=\"carousel-caption\"> <h3>" + pictures[0].modle +"</h3> <p>"+pictures[0].description+"</p></div></div>";
-
-  for (var i = 1; i < pictures.length; i++) {
-      text+="<div class=\"carousel-item\"> <img src=\""+pictures[i].path +"\" width=\"100%\"> <div class=\"carousel-caption\"> <h3>" + pictures[i].modle +"</h3> <p>"+pictures[i].description+"</p></div></div>";
-  }
-  section[0].innerHTML=text;
-
-  section=document.getElementsByClassName("carousel-indicators");
-  text="<li class=\"left\" data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>";
-
-  if(pictures.length==1)
-  {
-    text="<li class=\"left right\" data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>";
-  }
-
-  for (var i = 1; i < pictures.length; i++) {
-    if(i==pictures.length-1)
-    {
-        text+="<li class=\"right\" data-target=\"#demo\" data-slide-to=\""+i+"\" class=\"active\"></li>";
-    }
-    else{
-        text+="<li data-target=\"#demo\" data-slide-to=\""+ i + "\"></li>";
-    }
-  }
-  section[0].innerHTML=text;
+function getRandomSize(min, max) {
+return Math.round(Math.random() * (max - min) + min);
 }
 
-function up(){
-  if(like===false && dislike===false)
-  {
-    like=true;
-    document.getElementById('vote1').style.color="#32CD32";
-    document.getElementById('thumbs-up').style.color="#32CD32";
-    up1++;
-    document.getElementById('thumbs-up').innerHTML=up1;
+function loadPictures(){
 
+  var allImages = "";
+
+  for (var i = 0; i < 25; i++) {
+    var width = getRandomSize(200, 400);
+    var height =  getRandomSize(200, 400);
+    allImages += '<img src="https://placekitten.com/'+width+'/'+height+'" alt="pretty kitty">';
+}
+
+$('#gallery').append(allImages);
+  var pictures=getAprovedArray();
+  var section = document.getElementById("gallery");
+  console.log(section);
+  var text='';
+
+  for (var i = 0; i < pictures.length; i++) {
+      text+= "<section class=\"card\"> <img class=\"card-img-top img-fluid\" src=\""+ pictures[i].path +"\"> </section>";
+      console.log("ey");
   }
-  if(like===false && dislike===true)
-  {
-    like=true;
-    dislike=false;
-    document.getElementById('vote2').style.color="#fff";
-    document.getElementById('thumbs-down').style.color="#fff";
-    down1--;
-    document.getElementById('thumbs-down').innerHTML=down1;
-    like=true;
-    document.getElementById('vote1').style.color="#32CD32";
-    document.getElementById('thumbs-up').style.color="#32CD32";
-    up1++;
-    document.getElementById('thumbs-up').innerHTML=up1;
-  }
+
+  console.log(text);
+
+  section.innerHTML=text;
 }
 
 function showList(){
@@ -168,7 +180,7 @@ function showList(){
   {
     var section = document.getElementById('list');
     var text='';
-    document.getElementById('demo').style.cssText='display: none !important';
+    document.getElementById('gallery').style.cssText='display: none !important';
     document.getElementById('submition').style.cssText='display: none !important';
     for (var i = 0; i < pics.length; i++) {
       text+="<article class=\"position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white\"><img src=\""+pics[i].path+"\" class=\"littlepics\"> <p class=\"description\">First name: "+ pics[i].firstName + "</p> <p class=\"description\">Last name: "+ pics[i].lastName+"</p> <p class=\"description\">Modle: "+ pics[i].modle +"</p> <p class=\"description\">Description: "+ pics[i].description +"</p>";
@@ -202,40 +214,7 @@ function changeValue(i){
 function goBack(){
   document.getElementsByClassName('password')[0].value='';
   document.getElementById('list').style.cssText='display: none !important';
-  document.getElementById('demo').style.cssText='display: block !important';
+  document.getElementById('gallery').style.cssText='display: block !important';
   document.getElementById('submition').style.cssText='display: block !important';
   loadPictures();
-  var left =  document.getElementsByClassName('left')[0].offsetLeft + document.getElementById('margin').offsetWidth;
-  var right =  document.getElementsByClassName('right')[0].offsetLeft +document.getElementById('margin').offsetWidth;
-  var a = left-20 ;
-  var b = right + 40;
-  var c = left - 35;
-  var d = right +60;
-  document.getElementById('vote1').style.cssText='left:' + a +'px!important;';
-  document.getElementById('vote2').style.cssText='left:' + b +'px!important;';
-  document.getElementById('thumbs-up').style.cssText='left:' + c +'px!important;';
-  document.getElementById('thumbs-down').style.cssText='left:' + d +'px!important;';
-}
-
-function down(){
-  if(dislike===false && like===false)
-  {
-    dislike=true;
-    document.getElementById('vote2').style.color="#FF0000";
-    document.getElementById('thumbs-down').style.color="#FF0000";
-    down1++;
-    document.getElementById('thumbs-down').innerHTML=down1;
-  }if(dislike===false && like===true)
-  {
-    dislike=true;
-    like=false;
-    document.getElementById('vote1').style.color="#fff";
-    document.getElementById('thumbs-up').style.color="#fff";
-    up1--;
-    document.getElementById('thumbs-up').innerHTML=up1;
-    document.getElementById('vote2').style.color="#FF0000";
-    document.getElementById('thumbs-down').style.color="#FF0000";
-    down1++;
-    document.getElementById('thumbs-down').innerHTML=down1;
-  }
 }

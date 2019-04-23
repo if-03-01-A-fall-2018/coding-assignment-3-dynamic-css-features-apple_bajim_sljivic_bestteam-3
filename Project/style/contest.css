@@ -20,7 +20,7 @@
 
 .description{
   margin: 0;
-  font-size: 20%;
+  font-size: 40px;
 }
 
 #back{
@@ -33,10 +33,50 @@
   margin-right: 1rem;
 }
 
-.card:hover{
+.card:hover .card-img-top{
   opacity: 0.5;
 }
 
-.card{
+.card:hover .center{
+  opacity: 1;
+}
+
+.card-img-top{
   transition: .5s ease;
+}
+
+.center{
+  position: absolute;
+  margin-top: -25px;
+  font-size: 300%;
+  left: 50%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.modle{
+  top: 40%;
+  margin-top: -55px;
+}
+
+.description{
+  top:60%;
+}
+
+.heart{
+  top: 50%;
+  margin-left: -55px;
+}
+
+.crossmark{
+  top: 50%;
+  margin-left: 55px;
+}
+
+.likes{
+  top:50%;
+}
+
+.dislikes{
+  top:50%;
 }

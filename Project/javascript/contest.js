@@ -1,14 +1,10 @@
-var up1=0;
-var down1=0;
-var like=false;
-var dislike=false;
 
 var pics=[{
     path: "../../contest/pic1.jpg",
     modle: "Iphone7",
     description: "is toll",
     likes:0,
-    dislike:0,
+    dislikes:0,
     liked:false,
     disliked:false,
     aproved:true,
@@ -20,7 +16,7 @@ var pics=[{
       modle: "Iphone7",
       description: "is toll",
       likes:0,
-      dislike:0,
+      dislikes:0,
       liked:false,
       disliked:false,
       aproved:true,
@@ -32,7 +28,7 @@ var pics=[{
       modle: "Iphone7",
       description: "is toll",
       likes:0,
-      dislike:0,
+      dislikes:0,
       liked:false,
       disliked:false,
       aproved:true,
@@ -44,7 +40,7 @@ var pics=[{
         modle: "Iphone7",
         description: "is toll",
         likes:0,
-        dislike:0,
+        dislikes:0,
         liked:false,
         disliked:false,
         aproved:true,
@@ -56,7 +52,7 @@ var pics=[{
           modle: "Iphone7",
           description: "is toll",
           likes:0,
-          dislike:0,
+          dislikes:0,
           liked:false,
           disliked:false,
           aproved:true,
@@ -68,7 +64,7 @@ var pics=[{
             modle: "Iphone7",
             description: "is toll",
             likes:0,
-            dislike:0,
+            dislikes:0,
             liked:false,
             disliked:false,
             aproved:true,
@@ -80,7 +76,7 @@ var pics=[{
               modle: "Iphone7",
               description: "is toll",
               likes:0,
-              dislike:0,
+              dislikes:0,
               liked:false,
               disliked:false,
               aproved:true,
@@ -92,7 +88,7 @@ var pics=[{
               modle: "Iphone7",
               description: "is toll",
               likes:0,
-              dislike:0,
+              dislikes:0,
               liked:false,
               disliked:false,
               aproved:true,
@@ -104,7 +100,7 @@ var pics=[{
               modle: "Iphone7",
               description: "is toll",
               likes:0,
-              dislike:0,
+              dislikes:0,
               liked:false,
               disliked:false,
               aproved:true,
@@ -117,7 +113,7 @@ var pics=[{
               modle: "Iphone7",
               description: "is toll",
               likes:0,
-              dislike:0,
+              dislikes:0,
               liked:false,
               disliked:false,
               aproved:true,
@@ -156,32 +152,73 @@ function getAprovedArray(){
   return aproved;
 }
 
-function getRandomSize(min, max) {
-return Math.round(Math.random() * (max - min) + min);
+
+function likepic(i){
+  var pictures=getAprovedArray();
+
+  if(!pictures[i].liked)
+  {
+    pictures[i].liked=true;
+    document.getElementById("like"+i).style.color="#29b23d";
+    if(pictures[i].disliked)
+    {
+      document.getElementById("dislike"+i).style.color="#000";
+      pictures[i].disliked=false;
+    }
+  }
+
+  else{
+    document.getElementById("like"+i).style.color="#000";
+    pictures[i].liked=false;
+  }
 }
+
+function dblikepic(i){
+  var pictures=getAprovedArray();
+
+  if(!pictures[i].liked)
+  {
+    pictures[i].liked=true;
+    document.getElementById("like"+i).style.color="#29b23d";
+    if(pictures[i].disliked)
+    {
+      document.getElementById("dislike"+i).style.color="#000";
+      pictures[i].disliked=false;
+    }
+  }
+}
+
+function dislikepic(i){
+  var pictures=getAprovedArray();
+
+  if(!pictures[i].disliked)
+  {
+    pictures[i].disliked=true;
+    document.getElementById("dislike"+i).style.color="#db2727";
+    if(pictures[i].liked)
+    {
+      document.getElementById("like"+i).style.color="#000";
+      pictures[i].liked=false;
+    }
+  }
+  else {
+    document.getElementById("dislike"+i).style.color="#000";
+    pictures[i].disliked=false;
+  }
+}
+
 
 function loadPictures(){
-
-  var allImages = "";
-
-  for (var i = 0; i < 25; i++) {
-    var width = getRandomSize(200, 400);
-    var height =  getRandomSize(200, 400);
-    allImages += '<img src="https://placekitten.com/'+width+'/'+height+'" alt="pretty kitty">';
-}
-
-$('#gallery').append(allImages);
   var pictures=getAprovedArray();
   var section = document.getElementById("gallery");
   console.log(section);
   var text='';
 
   for (var i = 0; i < pictures.length; i++) {
-      text+= "<section class=\"card\"> <img id=\"pic"+ i +"\" class=\"card-img-top img-fluid\" src=\""+ pictures[i].path +"\"> </section>";
+      text+= "<section class=\"card\"> <img ondblclick=\"dblikepic("+i+")\" class=\"card-img-top img-fluid\" src=\""+ pictures[i].path +"\"> <i id=\"like"+ i +"\" class=\"center heart fas fa-heart\" onclick=\"likepic("+ i +")\"></i> <i id=\"dislike"+ i +"\"  class=\"center crossmark fas fa-times\" onclick=\"dislikepic("+ i +")\"></i> <p class=\"center likes\">"+ pictures[i].likes +"</p> <p class=\"center dislikes\">"+ pictures[i].likes +"</p> <p class=\"modle center\">"+ pictures[i].modle+"</p><p class=\"description center\">"+ pictures[i].description +"</p></section>";
       console.log("ey");
   }
 
-  console.log(text);
 
   section.innerHTML=text;
 }

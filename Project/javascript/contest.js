@@ -1,7 +1,7 @@
 
 var pics=[{
     path: "../../contest/pic1.jpg",
-    modle: "Iphone7",
+    model: "Iphone7",
     description: "is toll",
     likes:0,
     dislikes:0,
@@ -13,7 +13,7 @@ var pics=[{
   },
   {
       path: "../../contest/pic2.jpg",
-      modle: "Iphone7",
+      model: "Iphone7",
       description: "is toll",
       likes:0,
       dislikes:0,
@@ -25,7 +25,7 @@ var pics=[{
   },
   {
       path: "../../contest/pic3.jpg",
-      modle: "Iphone7",
+      model: "Iphone7",
       description: "is toll",
       likes:0,
       dislikes:0,
@@ -37,7 +37,7 @@ var pics=[{
     },
     {
         path: "../../contest/pic4.jpg",
-        modle: "Iphone7",
+        model: "Iphone7",
         description: "is toll",
         likes:0,
         dislikes:0,
@@ -49,7 +49,7 @@ var pics=[{
       },
       {
           path: "../../images/other/image1.jpeg",
-          modle: "Iphone7",
+          model: "Iphone7",
           description: "is toll",
           likes:0,
           dislikes:0,
@@ -61,7 +61,7 @@ var pics=[{
         },
         {
             path: "../../images/other/image2.jpeg",
-            modle: "Iphone7",
+            model: "Iphone7",
             description: "is toll",
             likes:0,
             dislikes:0,
@@ -73,7 +73,7 @@ var pics=[{
           },
           {
               path: "../../contest/pic5.jpg",
-              modle: "Iphone7",
+              model: "Iphone7",
               description: "is toll",
               likes:0,
               dislikes:0,
@@ -85,7 +85,7 @@ var pics=[{
           },
           {
               path: "../../contest/pic6.jpg",
-              modle: "Iphone7",
+              model: "Iphone7",
               description: "is toll",
               likes:0,
               dislikes:0,
@@ -97,7 +97,7 @@ var pics=[{
           },
           {
               path: "../../contest/pic7.jpg",
-              modle: "Iphone7",
+              model: "Iphone7",
               description: "is toll",
               likes:0,
               dislikes:0,
@@ -110,7 +110,7 @@ var pics=[{
 
           {
               path: "../../contest/pic8.jpg",
-              modle: "Iphone7",
+              model: "Iphone7",
               description: "is toll",
               likes:0,
               dislikes:0,
@@ -215,7 +215,7 @@ function loadPictures(){
   var text='';
 
   for (var i = 0; i < pictures.length; i++) {
-      text+= "<section class=\"card\"> <img ondblclick=\"dblikepic("+i+")\" class=\"card-img-top img-fluid\" src=\""+ pictures[i].path +"\"> <i id=\"like"+ i +"\" class=\"center heart fas fa-heart\" onclick=\"likepic("+ i +")\"></i> <i id=\"dislike"+ i +"\"  class=\"center crossmark fas fa-times\" onclick=\"dislikepic("+ i +")\"></i> <p class=\"center likes\">"+ pictures[i].likes +"</p> <p class=\"center dislikes\">"+ pictures[i].likes +"</p> <p class=\"modle center\">"+ pictures[i].modle+"</p><p class=\"description center\">"+ pictures[i].description +"</p></section>";
+      text+= "<section class=\"card\"> <img ondblclick=\"dblikepic("+i+")\" class=\"card-img-top img-fluid\" src=\""+ pictures[i].path +"\"> <i id=\"like"+ i +"\" class=\"center heart fas fa-heart\" onclick=\"likepic("+ i +")\"></i> <i id=\"dislike"+ i +"\"  class=\"center crossmark fas fa-times\" onclick=\"dislikepic("+ i +")\"></i> <p class=\"center likes\">"+ pictures[i].likes +"</p> <p class=\"center dislikes\">"+ pictures[i].likes +"</p> <p class=\"model center\">"+ pictures[i].model+"</p><p class=\"description center\">"+ pictures[i].description +"</p></section>";
       console.log("ey");
   }
 
@@ -233,7 +233,7 @@ function showList(){
     document.getElementById('gallery').style.cssText='display: none !important';
     document.getElementById('submition').style.cssText='display: none !important';
     for (var i = 0; i < pics.length; i++) {
-      text+="<article class=\"position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white\"><img src=\""+pics[i].path+"\" class=\"littlepics\"> <p class=\"description\">First name: "+ pics[i].firstName + "</p> <p class=\"description\">Last name: "+ pics[i].lastName+"</p> <p class=\"description\">Modle: "+ pics[i].modle +"</p> <p class=\"description\">Description: "+ pics[i].description +"</p>";
+      text+="<article class=\"position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white\"><img src=\""+pics[i].path+"\" class=\"littlepics\"> <p class=\"description\">First name: "+ pics[i].firstName + "</p> <p class=\"description\">Last name: "+ pics[i].lastName+"</p> <p class=\"description\">model: "+ pics[i].model +"</p> <p class=\"description\">Description: "+ pics[i].description +"</p>";
 
       if(pics[i].aproved){
           text+="<input id=\"aproved\" type=\"checkbox\" checked onclick=(changeValue("+ i +"))> <label class=\"description\" for=\"aproved\">Aproved</label></article>";

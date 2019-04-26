@@ -40,11 +40,20 @@
         <section class="col-md-5 p-lg-5 mx-auto my-5">
           <h1 class="display-4 font-weight-normal">CALL FOR ENTRIES</h1>
           <p class="lead font-weight-normal">Our aim is to discover the best phone camera. Send us your picture and let the people discide if yours was the best! Have fun! <3</p>
-          <button type="button" class="btn btn-outline-secondary bg-light" data-toggle="modal" data-target=".bd-example-modal-xl">Submition</button>
-          <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
+          <!-- Large modal -->
+          <button type="button" class="btn btn-outline-secondary bg-light" data-toggle="modal" data-target=".bd-example-modal-lg">Submition</button>
+
+          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
               <div class="modal-content">
-                <h1 style="color:#000">ey</h1>
+                <input type="text" name="first_name" placeholder="First Name">
+                <input type="text" name="last_name" placeholder="Last Name">
+                <input type="text" name="description" placeholder="Description" maxlength="100" >
+                <input type="text" name="model" placeholder="Model">
+                <input type="file" name="pic" accept="image/*">
+                <div class="submit">
+                  <input type="submit"value="Submit" style="width: 20%;" id="submitbutton">
+                </div>
               </div>
             </div>
           </div>

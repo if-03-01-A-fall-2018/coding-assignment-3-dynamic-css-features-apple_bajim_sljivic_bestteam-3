@@ -1,4 +1,16 @@
+input{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  outline: none;
+  
+}
 
+#submitbutton{
+  float: right;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
 
 .password{
   outline: none;
@@ -54,7 +66,7 @@
   transition: .5s ease;
 }
 
-.modle{
+.model{
   top: 40%;
   margin-top: -55px;
 }

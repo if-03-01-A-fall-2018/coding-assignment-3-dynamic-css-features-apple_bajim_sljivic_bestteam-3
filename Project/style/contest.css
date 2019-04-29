@@ -2,8 +2,10 @@ input{
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  padding: 5px;
   outline: none;
-  
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 #submitbutton{

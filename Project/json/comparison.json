@@ -1,5 +1,5 @@
-"products":[
-  [
+{
+  "products":[
     {
       "model": "Please choose a iPhone."
     },
@@ -12,7 +12,7 @@
       "display": "3.5\"",
       "camera": "2MP",
       "frontCamera": "No",
-      "releaseDate": "June 2007",
+      "releaseDate": "June 2007"
     },
     {
       "model": "iPhone 3G",
@@ -23,7 +23,7 @@
       "display": "3.5",
       "camera": "2MP",
       "frontCamera": "No",
-      "releaseDate": "July 2008",
+      "releaseDate": "July 2008"
     },
     {
       "model": "iPhone 4",
@@ -34,7 +34,7 @@
       "display": "3.5",
       "camera": "5MP",
       "frontCamera": "0.3MP",
-      "releaseDate": "June 2010",
+      "releaseDate": "June 2010"
     },
     {
       "model": "iPhone 4s",
@@ -45,7 +45,7 @@
       "display": "3.5\"",
       "camera": "8MP",
       "frontCamera": "0.3MP",
-      "releaseDate": "October 2011",
+      "releaseDate": "October 2011"
     },
     {
       "model": "iPhone 5",
@@ -56,7 +56,7 @@
       "display": "4\"",
       "camera": "8MP",
       "frontCamera": "1.2MP",
-      "releaseDate": "November 2012",
+      "releaseDate": "November 2012"
     },
     {
       "model": "iPhone 5c",
@@ -67,7 +67,7 @@
       "display": "4\"",
       "camera": "8MP",
       "frontCamera": "1.2MP",
-      "releaseDate": "September 2013",
+      "releaseDate": "September 2013"
     },
     {
       "model": "iPhone 5s",
@@ -78,7 +78,7 @@
       "display": "4\"",
       "camera": "8MP",
       "frontCamera": "1.2MP",
-      "releaseDate": "September 2013",
+      "releaseDate": "September 2013"
     },
     {
       "model": "iPhone 6",
@@ -89,7 +89,7 @@
       "display": "4.7\"",
       "camera": "8MP",
       "frontCamera": "1.2MP",
-      "releaseDate": "September 2014",
+      "releaseDate": "September 2014"
     },
     {
       "model": "iPhone 6s",
@@ -100,7 +100,7 @@
       "display": "4.7\"",
       "camera": "12MP",
       "frontCamera": "5MP",
-      "releaseDate": "September 2015",
+      "releaseDate": "September 2015"
     },
     {
       "model": "iPhone SE",
@@ -111,7 +111,7 @@
       "display": "4\"",
       "camera": "12MP",
       "frontCamera": "1.2MP",
-      "releaseDate": "March 2016",
+      "releaseDate": "March 2016"
     },
     {
       "model": "iPhone 7",
@@ -122,7 +122,7 @@
       "display": "4.7\"",
       "camera": "12MP",
       "frontCamera": "7MP",
-      "releaseDate": "September 2016",
+      "releaseDate": "September 2016"
     },
     {
       "model": "iPhone 8",
@@ -133,7 +133,7 @@
       "display": "4.7\"",
       "camera": "12MP",
       "frontCamera": "7MP",
-      "releaseDate": "September 2016",
+      "releaseDate": "September 2016"
     },
     {
       "model": "iPhone X",
@@ -144,7 +144,7 @@
       "display": "5.8\"",
       "camera": "12MP",
       "frontCamera": "7MP",
-      "releaseDate": "September 2017",
+      "releaseDate": "September 2017"
     },
     {
       "model": "iPhone XS",
@@ -155,7 +155,7 @@
       "display": "5.8\"",
       "camera": "12MP",
       "frontCamera": "7MP",
-      "releaseDate": "September 2018",
+      "releaseDate": "September 2018"
     },
     {
       "model": "iPhone XR",
@@ -166,7 +166,8 @@
       "display": "6.1\"",
       "camera": "12MP",
       "frontCamera": "7MP",
-      "releaseDate": "September 2018",
+      "releaseDate": "September 2018"
     }
   ]
-];
+
+}

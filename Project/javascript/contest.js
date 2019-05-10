@@ -1,130 +1,17 @@
-
-var pics=[{
-    path: "../../contest/pic1.jpg",
-    model: "Iphone7",
-    description: "is toll",
-    likes:0,
-    dislikes:0,
-    liked:false,
-    disliked:false,
-    aproved:true,
-    firstName: "Emina",
-    lastName: "Sljivic",
-  },
-  {
-      path: "../../contest/pic2.jpg",
-      model: "Iphone7",
-      description: "is toll",
-      likes:0,
-      dislikes:0,
-      liked:false,
-      disliked:false,
-      aproved:true,
-      firstName: "Emina",
-      lastName: "Sljivic",
-  },
-  {
-      path: "../../contest/pic3.jpg",
-      model: "Iphone7",
-      description: "is toll",
-      likes:0,
-      dislikes:0,
-      liked:false,
-      disliked:false,
-      aproved:true,
-      firstName: "Emina",
-      lastName: "Sljivic",
-    },
-    {
-        path: "../../contest/pic4.jpg",
-        model: "Iphone7",
-        description: "is toll",
-        likes:0,
-        dislikes:0,
-        liked:false,
-        disliked:false,
-        aproved:true,
-        firstName: "Emina",
-        lastName: "Sljivic",
-      },
-      {
-          path: "../../images/other/image1.jpeg",
-          model: "Iphone7",
-          description: "is toll",
-          likes:0,
-          dislikes:0,
-          liked:false,
-          disliked:false,
-          aproved:true,
-          firstName: "Emina",
-          lastName: "Sljivic",
-        },
-        {
-            path: "../../images/other/image2.jpeg",
-            model: "Iphone7",
-            description: "is toll",
-            likes:0,
-            dislikes:0,
-            liked:false,
-            disliked:false,
-            aproved:true,
-            firstName: "Emina",
-            lastName: "Sljivic",
-          },
-          {
-              path: "../../contest/pic5.jpg",
-              model: "Iphone7",
-              description: "is toll",
-              likes:0,
-              dislikes:0,
-              liked:false,
-              disliked:false,
-              aproved:true,
-              firstName: "Emina",
-              lastName: "Sljivic",
-          },
-          {
-              path: "../../contest/pic6.jpg",
-              model: "Iphone7",
-              description: "is toll",
-              likes:0,
-              dislikes:0,
-              liked:false,
-              disliked:false,
-              aproved:true,
-              firstName: "Emina",
-              lastName: "Sljivic",
-          },
-          {
-              path: "../../contest/pic7.jpg",
-              model: "Iphone7",
-              description: "is toll",
-              likes:0,
-              dislikes:0,
-              liked:false,
-              disliked:false,
-              aproved:true,
-              firstName: "Emina",
-              lastName: "Sljivic",
-          },
-
-          {
-              path: "../../contest/pic8.jpg",
-              model: "Iphone7",
-              description: "is toll",
-              likes:0,
-              dislikes:0,
-              liked:false,
-              disliked:false,
-              aproved:true,
-              firstName: "Emina",
-              lastName: "Sljivic",
-          },
-
-]
-
 window.onload = function (){
+  readJson();
   loadPictures();
+}
+
+function readJson(){
+  fetch('http://localhost:3004/products').then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error('Request failed!');
+  }, networkError => {
+    console.log(networkError.message)
+  })
 }
 
 function getLenghtOfAproved(){

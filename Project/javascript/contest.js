@@ -1,18 +1,36 @@
+var jsonData;
+
 window.onload = function (){
   readJson();
   loadPictures();
 }
 
-function readJson(){
-  fetch('http://localhost:3004/products').then(response => {
-    if (response.ok) {
-      return response.json();
-    }
-    throw new Error('Request failed!');
-  }, networkError => {
-    console.log(networkError.message)
-  })
+
+
+function parse(){
+
 }
+
+function readJson(){
+
+  fetch('http://localhost:3000/submition')
+     .then(response => {
+         if (!response.ok) {
+             throw new Error("HTTP error " + response.status);
+         }
+         return response.json();
+     })
+     .then(json => {
+         jsonData = json;
+         console.log(jsonData);
+         var obj = JSON.parse(jsonData);
+         console.log(obj);
+     })
+     .catch(function () {
+         this.dataError = true;
+     });
+}
+
 
 function getLenghtOfAproved(){
   var count=0;

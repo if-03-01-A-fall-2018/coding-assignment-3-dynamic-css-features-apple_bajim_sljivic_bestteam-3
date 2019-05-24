@@ -1,4 +1,4 @@
-var jsonData;
+var pics= [];
 
 window.onload = function (){
   readJson();
@@ -7,8 +7,12 @@ window.onload = function (){
 
 
 
-function parse(){
-
+function parse(json){
+  for (var i = 0; i < json.length; i++) {
+    var newPic = "{ \"path\": \""+ jsn[i].path +", \"model\": \""+ json[i].model +"\",\"description\": \""+ json[i].description +"\",\"likes\": "+ json[i].likes +",\"dislikes\": "+ json[i].dislikes +",\"liked\": false ,\" disliked \": + json[i].disliked + ",\"aproved\":  "+ json[i].aproved +",\"firstName\": \""+json[i].firstName+"\",\"lastName\": \""+ json[i].lastName +"\"}";
+    console.log(newPic);
+    pics[i]=JSON.parse(newPic);
+  }
 }
 
 function readJson(){
@@ -21,10 +25,7 @@ function readJson(){
          return response.json();
      })
      .then(json => {
-         jsonData = json;
-         console.log(jsonData);
-         var obj = JSON.parse(jsonData);
-         console.log(obj);
+         parse(json);
      })
      .catch(function () {
          this.dataError = true;
@@ -116,12 +117,10 @@ function dislikepic(i){
 function loadPictures(){
   var pictures=getAprovedArray();
   var section = document.getElementById("gallery");
-  console.log(section);
   var text='';
 
   for (var i = 0; i < pictures.length; i++) {
       text+= "<section class=\"card\"> <img ondblclick=\"dblikepic("+i+")\" class=\"card-img-top img-fluid\" src=\""+ pictures[i].path +"\"> <i id=\"like"+ i +"\" class=\"center heart fas fa-heart\" onclick=\"likepic("+ i +")\"></i> <i id=\"dislike"+ i +"\"  class=\"center crossmark fas fa-times\" onclick=\"dislikepic("+ i +")\"></i> <p class=\"center likes\">"+ pictures[i].likes +"</p> <p class=\"center dislikes\">"+ pictures[i].likes +"</p> <p class=\"model center\">"+ pictures[i].model+"</p><p class=\"description center\">"+ pictures[i].description +"</p></section>";
-      console.log("ey");
   }
 
 

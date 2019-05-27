@@ -9,7 +9,7 @@ window.onload = function (){
 
 function parse(json){
   for (var i = 0; i < json.length; i++) {
-    var newPic = "{ \"path\": \""+ jsn[i].path +", \"model\": \""+ json[i].model +"\",\"description\": \""+ json[i].description +"\",\"likes\": "+ json[i].likes +",\"dislikes\": "+ json[i].dislikes +",\"liked\": false ,\" disliked \": + json[i].disliked + ",\"aproved\":  "+ json[i].aproved +",\"firstName\": \""+json[i].firstName+"\",\"lastName\": \""+ json[i].lastName +"\"}";
+    var newPic = "{ \"path\": \""+ json[i].path +", \"model\": \""+ json[i].model +"\",\"description\": \""+ json[i].description +"\",\"likes\": " + json[i].likes + ",\"dislikes\": " + json[i].dislikes + ",\"liked\": " + json[i].liked + " , disliked \":" + json[i].disliked "+ ",\"aproved\": + json[i].aproved +",\"firstName\": \""+json[i].firstName+"\",\"lastName\": \""+ json[i].lastName +"\"}";
     console.log(newPic);
     pics[i]=JSON.parse(newPic);
   }
@@ -31,7 +31,6 @@ function readJson(){
          this.dataError = true;
      });
 }
-
 
 function getLenghtOfAproved(){
   var count=0;

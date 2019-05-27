@@ -111,7 +111,7 @@ function loadPictures(){
   var text='';
 
   for (var i = 0; i < pictures.length; i++) {
-      text+= "<section class=\"card\"> <img ondblclick=\"dblikepic("+i+")\" class=\"card-img-top img-fluid\" src=\""+ pictures[i].path +"\"> <i id=\"like"+ i +"\" class=\"center heart fas fa-heart\" onclick=\"likepic("+ i +")\"></i> <i id=\"dislike"+ i +"\"  class=\"center crossmark fas fa-times\" onclick=\"dislikepic("+ i +")\"></i> <p class=\"center likes\">"+ pictures[i].likes +"</p> <p class=\"center dislikes\">"+ pictures[i].likes +"</p> <p class=\"model center\">"+ pictures[i].model+"</p><p class=\"description center\">"+ pictures[i].description +"</p></section>";
+      text+= "<section class=\"card\"> <img ondblclick=\"dblikepic("+i+")\" class=\"card-img-top img-fluid\" src=\""+ pictures[i].path +"\"> <i id=\"like"+ i +"\" class=\"center heart fas fa-heart\" onclick=\"likepic("+ i +")\"></i> <i id=\"dislike"+ i +"\"  class=\"center crossmark fas fa-times\" onclick=\"dislikepic("+ i +")\"></i> <p class=\" likes\">"+ pictures[i].likes +"</p> <p class=\" dislikes\">"+ pictures[i].likes +"</p> <p class=\"model\">"+ pictures[i].model+"</p><p class=\"description\">"+ pictures[i].description +"</p></section>";
   }
 
 
@@ -163,3 +163,4 @@ function goBack(){
   document.getElementById('submition').style.cssText='display: block !important';
   loadPictures();
 }
+//https://bootstrapshuffle.com/builder?project=a28cdcab9d18fff96e9911847b6ecd96ffd937c3

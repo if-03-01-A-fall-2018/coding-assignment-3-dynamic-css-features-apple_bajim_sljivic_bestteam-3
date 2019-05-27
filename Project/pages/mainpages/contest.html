@@ -35,25 +35,39 @@
     </nav>
     <script src="../../javascript/contest.js"></script>
 
+
+
     <article id="submition">
       <article class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white">
         <section class="col-md-5 p-lg-5 mx-auto my-5">
           <h1 class="display-4 font-weight-normal">CALL FOR ENTRIES</h1>
           <p class="lead font-weight-normal">Our aim is to discover the best picture taken by a mobile phone. Submit it and let people decide if yours is the best! Have fun! <3</p>
 
-          <button type="button" class="btn btn-outline-secondary bg-light" data-toggle="modal" data-target=".bd-example-modal-lg">Submit!</button>
+          <button type="button" class="btn btn-outline-secondary bg-light" data-toggle="modal" data-target=".bd-example-modal-xl">Submit!</button>
 
-          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
               <div class="modal-content">
-                <input type="text" name="first_name" placeholder="First Name">
-                <input type="text" name="last_name" placeholder="Last Name">
-                <input type="text" name="description" placeholder="Description" maxlength="100" >
-                <input type="text" name="model" placeholder="Model">
-                <input id="file" style="border: 0px!important"type="file" name="pic" accept="image/*">
-                <div class="submit">
-                  <input type="submit"value="Submit" style="width: 20%;" id="submitbutton">
-                </div>
+
+                <div class="modal-header">
+        <h5 class="modal-title">Submit your picture!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text" name="first_name" placeholder="First Name">
+        <input type="text" name="last_name" placeholder="Last Name">
+        <input type="text" name="description" placeholder="Description" maxlength="100" >
+        <input type="text" name="model" placeholder="Model">
+        <input id="file" style="border: 0px!important"type="file" name="pic" accept="image/*">
+        <div class="submit">
+          <input type="submit"value="Submit" style="width: 20%;" id="submitbutton">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
               </div>
             </div>
           </div>

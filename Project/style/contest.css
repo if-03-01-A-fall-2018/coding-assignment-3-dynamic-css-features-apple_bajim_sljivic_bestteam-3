@@ -68,15 +68,6 @@ input{
   transition: .5s ease;
 }
 
-.model{
-  top: 40%;
-  margin-top: -55px;
-}
-
-.description{
-  top:60%;
-}
-
 .heart{
   top: 50%;
   margin-left: -55px;
@@ -87,10 +78,6 @@ input{
   margin-left: 55px;
 }
 
-.likes{
-  top:50%;
-}
-
-.dislikes{
-  top:50%;
+.modal-content  input{
+  length: 100%;
 }

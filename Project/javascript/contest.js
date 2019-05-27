@@ -1,18 +1,8 @@
-var pics= [];
+var pics;
 
 window.onload = function (){
   readJson();
-  loadPictures();
-}
 
-
-
-function parse(json){
-  for (var i = 0; i < json.length; i++) {
-    var newPic = "{ \"path\": \""+ json[i].path +", \"model\": \""+ json[i].model +"\",\"description\": \""+ json[i].description +"\",\"likes\": " + json[i].likes + ",\"dislikes\": " + json[i].dislikes + ",\"liked\": " + json[i].liked + " , disliked \":" + json[i].disliked "+ ",\"aproved\": + json[i].aproved +",\"firstName\": \""+json[i].firstName+"\",\"lastName\": \""+ json[i].lastName +"\"}";
-    console.log(newPic);
-    pics[i]=JSON.parse(newPic);
-  }
 }
 
 function readJson(){
@@ -25,7 +15,9 @@ function readJson(){
          return response.json();
      })
      .then(json => {
-         parse(json);
+         pics=json;
+         console.log(pics);
+         loadPictures();
      })
      .catch(function () {
          this.dataError = true;

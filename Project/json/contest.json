@@ -23,6 +23,30 @@
       "aproved":  true,
       "firstName": "Emina",
       "lastName": "Sljivic"
+    },
+    {
+      "path": "../../contest/pic2.jpg",
+      "model": "Iphone7",
+      "description": "is toll",
+      "likes": 0,
+      "dislikes": 0,
+      "liked": false,
+      "disliked": false,
+      "aproved":  true,
+      "firstName": "Emina",
+      "lastName": "Sljivic"
+    },
+    {
+      "path": "../../contest/pic2.jpg",
+      "model": "Iphone7",
+      "description": "is toll",
+      "likes": 0,
+      "dislikes": 0,
+      "liked": false,
+      "disliked": false,
+      "aproved":  true,
+      "firstName": "Emina",
+      "lastName": "Sljivic"
     }
   ]
 }

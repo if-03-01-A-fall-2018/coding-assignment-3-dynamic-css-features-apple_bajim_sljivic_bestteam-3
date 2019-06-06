@@ -1,0 +1,68 @@
+
+.glow{
+  font-family: Neon;
+  text-shadow: #fff 0 0 15px;
+  color: #fff!important;
+}
+
+
+body{
+  background-color: #050e1e;
+}
+
+article{
+  padding: 0!important;
+}
+
+.blueicon{
+  font-size: 60px;
+  text-shadow: blue 0 0 15px;
+  color: blue;
+  position: absolute;
+}
+
+.redicon{
+  font-size: 60px;
+  text-shadow: red 0 0 15px;
+  color: red;
+  position: absolute;
+}
+
+.greenicon{
+  font-size: 60px;
+  text-shadow: green 0 0 15px;
+  color: green;
+  position: absolute;
+}
+
+.pinkicon{
+  font-size: 60px;
+  text-shadow: pink 0 0 15px;
+  color: pink;
+  position: absolute;
+}
+
+.purpleicon{
+  font-size: 60px;
+  text-shadow: purple 0 0 15px;
+  color: purple;
+  position: absolute;
+}
+
+.yellowicon{
+  font-size: 60px;
+  text-shadow: yellow 0 0 15px;
+  color: yellow;
+  position: absolute;
+}
+
+.hover:hover{
+  text-shadow: #fff 0 0 30px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.color{
+  color: black;
+}

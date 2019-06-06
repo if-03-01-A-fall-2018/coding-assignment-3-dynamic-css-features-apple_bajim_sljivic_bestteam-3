@@ -163,4 +163,3 @@ function goBack(){
   document.getElementById('submition').style.cssText='display: block !important';
   loadPictures();
 }
-//https://bootstrapshuffle.com/builder?project=a28cdcab9d18fff96e9911847b6ecd96ffd937c3

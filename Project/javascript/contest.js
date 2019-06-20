@@ -5,7 +5,9 @@ function readJson(){
          return response.json();
      })
      .then(json => {
+       console.log(pics);
          pics=json;
+         console.log(pics);
          loadPictures();
      });
 }

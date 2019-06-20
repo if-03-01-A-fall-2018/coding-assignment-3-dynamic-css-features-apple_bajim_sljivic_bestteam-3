@@ -272,7 +272,15 @@ function submitnow(){
       {
         var newPost=new Post(document.getElementById('firstName').value,document.getElementById('lastName').value,document.getElementById('description').value,document.getElementById('model2').value,event.target.result,0,0,false);
 
-        console.log(newPost);
+        fetch('http://localhost:3000/submition', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newPost)
+        }).then(res=>res.json())
+        .then(res => console.log(res));
 
         reader.readAsDataURL(file);
     }

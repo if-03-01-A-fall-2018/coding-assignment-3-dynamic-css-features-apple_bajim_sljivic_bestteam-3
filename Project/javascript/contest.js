@@ -1,5 +1,3 @@
-
-
 function readJson(){
 
   fetch('http://localhost:3000/submition')
@@ -104,8 +102,10 @@ function loadPictures(){
   var section = document.getElementById("gallery");
   var text='';
 
+  console.log(pictures);
+
   for (var i = 0; i < pictures.length; i++) {
-      text+= "<section class=\"card\"> <img ondblclick=\"dblikepic("+i+")\" class=\"card-img-top img-fluid\" src=\""+ pictures[i].path +"\"> <i id=\"like"+ i +"\" class=\"center heart fas fa-heart\" onclick=\"likepic("+ i +")\"></i> <i id=\"dislike"+ i +"\"  class=\"center crossmark fas fa-times\" onclick=\"dislikepic("+ i +")\"></i> <p class=\" likes\">"+ pictures[i].likes +"</p> <p class=\" dislikes\">"+ pictures[i].likes +"</p> <p class=\"model\">"+ pictures[i].model+"</p><p class=\"description\">"+ pictures[i].description +"</p></section>";
+      text+= "<section class=\"card\"> <img ondblclick=\"dblikepic("+i+")\" class=\"card-img-top img-fluid\" src=\""+ pictures[i].file +"\"> <i id=\"like"+ i +"\" class=\"center heart fas fa-heart\" onclick=\"likepic("+ i +")\"></i> <i id=\"dislike"+ i +"\"  class=\"center crossmark fas fa-times\" onclick=\"dislikepic("+ i +")\"></i> <p class=\" likes\">"+ pictures[i].likes +"</p> <p class=\" dislikes\">"+ pictures[i].dislikes +"</p> <p class=\"model\">"+ pictures[i].model+"</p><p class=\"description\">"+ pictures[i].description +"</p></section>";
   }
 
 
@@ -122,7 +122,7 @@ function showList(){
     document.getElementById('gallery').style.cssText='display: none !important';
     document.getElementById('submition').style.cssText='display: none !important';
     for (var i = 0; i < pics.length; i++) {
-      text+="<article class=\"position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white\"><img src=\""+pics[i].path+"\" class=\"littlepics\"> <p class=\"description\">First name: "+ pics[i].firstName + "</p> <p class=\"description\">Last name: "+ pics[i].lastName+"</p> <p class=\"description\">model: "+ pics[i].model +"</p> <p class=\"description\">Description: "+ pics[i].description +"</p>";
+      text+="<article class=\"position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark text-white\"><img src=\""+pics[i].file+"\" class=\"littlepics\"> <p class=\"description\">First name: "+ pics[i].firstName + "</p> <p class=\"description\">Last name: "+ pics[i].lastName+"</p> <p class=\"description\">model: "+ pics[i].model +"</p> <p class=\"description\">Description: "+ pics[i].description +"</p>";
 
       if(pics[i].aproved){
           text+="<input id=\"aproved\" type=\"checkbox\" checked onclick=(changeValue("+ i +"))> <label class=\"description\" for=\"aproved\">Aproved</label></article>";

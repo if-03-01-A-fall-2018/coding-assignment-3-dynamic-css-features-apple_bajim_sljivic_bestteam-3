@@ -8,10 +8,14 @@ input{
   border: 1px solid rgba(0, 0, 0, .85);
 }
 
-#submitbutton{
-  float: right;
-  margin-bottom: 10px;
-  margin-top: 0;
+
+.button{
+  position:absolute;
+  right: 0;
+}
+
+#file{
+  text-align: left;
 }
 
 .password{

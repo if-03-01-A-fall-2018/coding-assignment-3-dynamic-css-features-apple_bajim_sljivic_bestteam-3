@@ -1,27 +1,21 @@
-var pics;
 
-window.onload = function (){
-  readJson();
-
-}
 
 function readJson(){
 
   fetch('http://localhost:3000/submition')
      .then(response => {
-         if (!response.ok) {
-             throw new Error("HTTP error " + response.status);
-         }
          return response.json();
      })
      .then(json => {
          pics=json;
-         console.log(pics);
          loadPictures();
-     })
-     .catch(function () {
-         this.dataError = true;
      });
+}
+
+function reset(){
+  var input = $("#file");
+
+  input.replaceWith(input.val('').clone(true));
 }
 
 function getLenghtOfAproved(){
@@ -162,4 +156,125 @@ function goBack(){
   document.getElementById('gallery').style.cssText='display: block !important';
   document.getElementById('submition').style.cssText='display: block !important';
   loadPictures();
+}
+
+
+var pics;
+
+function Post(firstName, lastName, description, model, file, likes, dislikes, aproved) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.description = description;
+  this.model = model;
+  this.file = file;
+  this.likes = likes;
+  this.dislikes = dislikes;
+  this.aproved = aproved;
+}
+
+window.onload = function (){
+  readJson();
+  loadPhones();
+}
+
+function show(){
+  var phones;
+  fetch('http://localhost:3000/handymodels')
+     .then(response => {
+         return response.json();
+     })
+     .then(json => {
+       if(document.getElementById("model").selectedIndex==0)
+       {
+         document.getElementById("model2").style.cssText = 'display:none';
+       }
+       else{
+
+       document.getElementById('model2').options.length=1;
+       document.getElementById("model2").style.cssText = 'display:flex !important; margin:0 0 1rem 0!important';
+         phones=json[0];
+         phones=phones[Object.getOwnPropertyNames(phones)[document.getElementById("model").selectedIndex-1]];
+
+         for (var i = 0; i < phones.length; i++) {
+           document.getElementById('model2').options[document.getElementById('model2').options.length] = new Option( phones[i],phones[i]);
+         }
+       }
+     });
+
+}
+
+function loadPhones(){
+  var phones;
+  fetch('http://localhost:3000/handymodels')
+     .then(response => {
+         return response.json();
+     })
+     .then(json => {
+         phones=json[0];
+
+         for (var i = 0; i < 2; i++) {
+           document.getElementById('model').options[document.getElementById('model').options.length] = new Option( Object.getOwnPropertyNames(phones)[i]);
+         }
+     });
+
+
+}
+
+function submitnow(){
+  if(document.getElementById('firstName').value=="")
+  {
+    document.getElementById('firstName').classList.add("is-invalid");
+  }
+  else {
+    document.getElementById('firstName').classList.remove("is-invalid");
+  }
+  if(document.getElementById('lastName').value=="")
+  {
+    document.getElementById('lastName').classList.add("is-invalid");
+  }
+  else {
+    document.getElementById('lastName').classList.remove("is-invalid");
+  }
+  if(document.getElementById('description').value=="")
+  {
+    document.getElementById('description').classList.add("is-invalid");
+  }
+  else {
+    document.getElementById('description').classList.remove("is-invalid");
+  }
+  if(document.getElementById('model').value=="")
+  {
+    document.getElementById('model').classList.add("is-invalid");
+  }
+  else {
+    document.getElementById('model').classList.remove("is-invalid");
+  }
+  if(document.getElementById('file').value=="")
+  {
+    document.getElementById('file').classList.add("is-invalid");
+  }
+  else {
+    document.getElementById('file').classList.remove("is-invalid");
+  }
+
+  if(document.getElementById('model2').value=="")
+  {
+    document.getElementById('model2').classList.add("is-invalid");
+  }
+  else {
+    document.getElementById('model2').classList.remove("is-invalid");
+  }
+
+  if (document.getElementById('firstName').value!="" && document.getElementById('lastName').value!="" && document.getElementById('description').value!="" && document.getElementById('model').value!="" && document.getElementById('file').value!="") {
+      var file = document.getElementById("file").files[0];
+      var reader = new FileReader();
+      reader.onload=function(event)
+      {
+        var newPost=new Post(document.getElementById('firstName').value,document.getElementById('lastName').value,document.getElementById('description').value,document.getElementById('model2').value,event.target.result,0,0,false);
+
+        console.log(newPost);
+
+        reader.readAsDataURL(file);
+    }
+  }
 }

@@ -268,10 +268,12 @@ function submitnow(){
   if (document.getElementById('firstName').value!="" && document.getElementById('lastName').value!="" && document.getElementById('description').value!="" && document.getElementById('model').value!="" && document.getElementById('file').value!="") {
       var file = document.getElementById("file").files[0];
       var reader = new FileReader();
+      console.log("pl");
       reader.onload=function(event)
       {
+        console.log("");
         var newPost=new Post(document.getElementById('firstName').value,document.getElementById('lastName').value,document.getElementById('description').value,document.getElementById('model2').value,event.target.result,0,0,false);
-
+        console.log(newPost);
         fetch('http://localhost:3000/submition', {
         method: 'POST',
         headers: {
@@ -282,7 +284,8 @@ function submitnow(){
         }).then(res=>res.json())
         .then(res => console.log(res));
 
-        reader.readAsDataURL(file);
     }
+
+    reader.readAsDataURL(file);
   }
 }

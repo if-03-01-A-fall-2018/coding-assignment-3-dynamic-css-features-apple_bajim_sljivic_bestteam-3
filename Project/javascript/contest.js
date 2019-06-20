@@ -281,8 +281,7 @@ function submitnow(){
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(newPost)
-        }).then(res=>res.json())
-        .then(res => console.log(res));
+      });
 
     }
 

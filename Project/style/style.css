@@ -1,5 +1,4 @@
 @font-face { font-family: 'Luna'; src: url('../other/Luna.ttf') format('truetype'); }
-
 @font-face { font-family: 'Neon'; src: url('../other/Library 3 am.otf') format('truetype'); }
 
 .container {
@@ -106,7 +105,7 @@
 }
 
 .navimages{
-  width: 90%;
+  width: 68px;
 }
 
 .imac{
@@ -127,7 +126,6 @@
 }
 
 .productnav{
-  height: 22vh;
   margin-top: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -148,4 +146,13 @@
 .apps{
   margin-top: 10%;
   height:95%;
+}
+
+.preview{
+  height: 100%;
+  max-width: 100%;
+}
+
+.padding{
+  padding: 20px;
 }

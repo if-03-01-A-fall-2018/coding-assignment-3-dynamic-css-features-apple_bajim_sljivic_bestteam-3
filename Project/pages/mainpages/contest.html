@@ -20,21 +20,18 @@
              var reader = new FileReader();
              reader.onload = function (event) {
                 demoImage.src = reader.result;
-                console.log(reader.result);
              }
 
              reader.readAsDataURL(file);
           }
 
           function reset(){
-            console.log("ok");
             var control = $("#file"),
                 clearBn = $("#clear");
 
             clearBn.on("click", function(){
                 control.replaceWith( control.val('').clone( true ) );
             });
-            console.log("brudi");
           }
     </script>
   </head>
@@ -92,15 +89,15 @@
                       </div>
                     </div>
                     <div class="form-row">
-                      <input style="margin: 0!important" type="text" class="form-control" id="description" placeholder="Description" required>
+                      <input style="margin: 0!important" type="text" class="form-control" id="description" placeholder="Description" required  maxlength="20">
                     </div>
                     <div class="form-row">
                       <select style="margin:1rem 0!important;" class="custom-select my-1 mr-sm-2" id="model" required onchange="show()">
                         <option value="">Choose one...</option>
                       </select>
                     </div>
-                    <div class="form-row">
-                      <select style="display: none" class="custom-select my-1 mr-sm-2" id="model2" required>
+                    <div class="form-row" id="here">
+                      <select style="display: none" class="custom-select my-1 mr-sm-2" id="model2">
                         <option value="">Choose one...</option>
                       </select>
                     </div>
@@ -170,8 +167,8 @@ $('.custom-file-input').on('change', function() {
         <section class="col-6 col-md">
           <h5>About Us</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="https://www.instagram.com/meowmeowkillmenow/">Nadia - Instagram</a></li>
-            <li><a class="text-muted" href="https://www.instagram.com/emina_slj/">Emina - Instagram</a></li>
+            <li><a class="text-muted" target="_blank" href="https://www.instagram.com/meowmeowkillmenow/">Nadia - Instagram</a></li>
+            <li><a class="text-muted" target="_blank" href="https://www.instagram.com/emina_slj/">Emina - Instagram</a></li>
           </ul>
         </section>
       </article>

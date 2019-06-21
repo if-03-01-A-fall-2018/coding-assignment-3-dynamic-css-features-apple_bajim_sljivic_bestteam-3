@@ -56,7 +56,27 @@ function showFacts(select){
     document.getElementById('header'+select).innerHTML=products[selectedModel].model;
     var out="";
 
-    out += products[selectedModel].model + '</br>' + products[selectedModel].dimensions + '</br>' + products[selectedModel].ram + '</br>' + products[selectedModel].internalStoage + '</br>' + products[selectedModel].colors + '</br>' + products[selectedModel].display + '</br>' + products[selectedModel].camera + '</br>' + products[selectedModel].frontCamera + '</br>' + products[selectedModel].releaseDate + '</br>';
+console.log(products[selectedModel]);
+    if(selectedIndex==0)
+    {
+    out +=  '</br><b>' + products[selectedModel].dimensions + '</b></br><sup>Dimensions</sup></br><b>' + products[selectedModel].ram + '</b></br><sup>Ram</sup></br><b>' + products[selectedModel].internalStoage + '</b></br><sup>Internal Stoage</sup></br><b>' + products[selectedModel].colors + '</b></br><sup>Colors</sup></br><b>' + products[selectedModel].display + '</b></br><sup>Display</sup></br><b>' + products[selectedModel].camera + '</b></br><sup>Camera</sup></br><b>' + products[selectedModel].frontCamera + '</b></br><sup>Front Camera</sup></br><b>' + products[selectedModel].releaseDate + '</b></br><sup>Realese Date</sup></br>';
+    }
+    if(selectedIndex==1)
+    {
+    out += '</br><b>' + products[selectedModel].dispaly + '</b></br><sup>Display</sup></br><b>' + products[selectedModel].batteryRuntime + '</b></br><sup>Battery Runtime</sup></br><b>' + products[selectedModel].weight + '</b></br><sup>Weight</sup></br><b>' + products[selectedModel].storage + '</b></br><sup>Stroage</sup></br><b>' + products[selectedModel].equipment + '</b></br><sup>Equipement</sup></br>';
+    }
+    if(selectedIndex==2)
+    {
+    out += '</br><b>' + products[selectedModel].cpu + '</b></br><sup>CPU</sup></br><b>' + products[selectedModel].storage + '</b></br><sup>Storage</sup></br><b>' + products[selectedModel].color + '</b></br><sup>Color</sup></br><b>' + products[selectedModel].ram + '</b></br><sup>RAM</sup></br>';
+    }
+    if(selectedIndex==3)
+    {
+      out += '</br><b>' + products[selectedModel].cpu + '</b></br><sup>CPU</sup></br><b>' + products[selectedModel].storage + '</b></br><sup>Storage</sup></br><b>' + products[selectedModel].variations + '</b></br><sup>Variations</sup></br><b>' + products[selectedModel].ram + '</b></br><sup>RAM</sup></br><b>'+ products[selectedModel].wifi + '</b></br><sup>Wifi</sup></br>';
+    }
+    if(selectedIndex==4)
+    {
+      out += '</br><b>' + products[selectedModel].year + '</b></br><sup>Year</sup></br><b>' + products[selectedModel].internalStorage + '</b></br><sup>Internal Storage</sup></br><b>' + products[selectedModel].cpu + '</b></br><sup>CPU</sup></br><b>' + products[selectedModel].ram + '</b></br><sup>RAM</sup></br><b>'+ products[selectedModel].display + '</b></br><sup>Display</sup></br><b>'+ products[selectedModel].display + '</b></br><sup>Display</sup></br><b>'+ products[selectedModel].wifi + '</b></br><sup>Wifi</sup></br><b>';
+    }
     facts.innerHTML=out;
   }
 }

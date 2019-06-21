@@ -74,14 +74,19 @@ input{
 
 .heart{
   top: 50%;
-  margin-left: -55px;
+  margin-left: -77px;
 }
 
-.crossmark{
+.fullheart{
   top: 50%;
-  margin-left: 55px;
+  margin-left: 77px;
 }
 
 .modal-content  input{
   length: 100%;
+}
+
+.card{
+  display: flex;
+    justify-content: center;
 }

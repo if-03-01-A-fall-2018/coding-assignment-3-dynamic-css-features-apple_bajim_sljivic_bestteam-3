@@ -1,4 +1,3 @@
-
 .glow{
   font-family: Neon;
   text-shadow: #fff 0 0 15px;
@@ -44,8 +43,8 @@ article{
 
 .purpleicon{
   font-size: 60px;
-  text-shadow: purple 0 0 15px;
-  color: purple;
+  text-shadow: #743ddb 0 0 15px;
+  color: #743ddb;
   position: absolute;
 }
 

@@ -3,7 +3,7 @@ var deleted1=false;
 var deleted2=false;
 
 function readJson(){
-  fetch('http://cfg.wllgrsrv.cf/json/'+document.getElementById("Products").value)
+  fetch('http://webt.wllgrsrv.cf/json/'+document.getElementById("Products").value)
      .then(response => {
          if (!response.ok) {
              throw new Error("HTTP error " + response.status);

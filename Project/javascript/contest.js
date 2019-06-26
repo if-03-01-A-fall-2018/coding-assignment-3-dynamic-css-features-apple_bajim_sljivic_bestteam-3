@@ -1,6 +1,6 @@
 function readJson(){
 
-  fetch('http://cfg.wllgrsrv.cf/json/submition')
+  fetch('http://webt.wllgrsrv.cf/json/submition')
      .then(response => {
          return response.json();
      })
@@ -19,7 +19,7 @@ function reset(){
 function getLenghtOfAproved(){
   var pics;
 
-  fetch('http://cfg.wllgrsrv.cf/json/submition')
+  fetch('http://webt.wllgrsrv.cf/json/submition')
      .then(response => {
          return response.json();
      })
@@ -38,7 +38,7 @@ function getLenghtOfAproved(){
 
 function getAprovedArray(){
   var pics;
-  fetch('http://cfg.wllgrsrv.cf/json/submition')
+  fetch('http://webt.wllgrsrv.cf/json/submition')
      .then(response => {
          return response.json();
      })
@@ -62,7 +62,7 @@ function getAprovedArray(){
 
 function likepic(i){
   var likes;
-  fetch('http://cfg.wllgrsrv.cf/json/submition/'+i)
+  fetch('http://webt.wllgrsrv.cf/json/submition/'+i)
      .then(response => {
          return response.json();
      })
@@ -74,7 +74,7 @@ function likepic(i){
        {
          document.getElementById("like"+i).style.color="rgb(41, 178, 61)";
          likes=likes+1;
-         fetch('http://cfg.wllgrsrv.cf/json/submition/'+i, {
+         fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
          method: 'PATCH',
          headers: {
            'Accept': 'application/json, text/plain, */*',
@@ -88,7 +88,7 @@ function likepic(i){
            {
              likes=likes-2;
              document.getElementById("fullheart"+i).style.color="#000";
-             fetch('http://cfg.wllgrsrv.cf/json/submition/'+i, {
+             fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
              method: 'PATCH',
              headers: {
                'Accept': 'application/json, text/plain, */*',
@@ -104,7 +104,7 @@ function likepic(i){
        else {
          likes=likes-1;
          document.getElementById("like"+i).style.color="#000";
-         fetch('http://cfg.wllgrsrv.cf/json/submition/'+i, {
+         fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
          method: 'PATCH',
          headers: {
            'Accept': 'application/json, text/plain, */*',
@@ -120,7 +120,7 @@ function likepic(i){
 
 function dblikepic(i){
   var likes;
-  fetch('http://cfg.wllgrsrv.cf/json/submition/'+i)
+  fetch('http://webt.wllgrsrv.cf/json/submition/'+i)
      .then(response => {
          return response.json();
      })
@@ -131,7 +131,7 @@ function dblikepic(i){
     {
       document.getElementById("fullheart"+i).style.color="rgb(219, 39, 39)";
       likes=likes+2;
-      fetch('http://cfg.wllgrsrv.cf/json/submition/'+i, {
+      fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
       method: 'PATCH',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -145,7 +145,7 @@ function dblikepic(i){
         {
           likes=likes-1;
           document.getElementById("like"+i).style.color="#000";
-          fetch('http://cfg.wllgrsrv.cf/json/submition/'+i, {
+          fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
           method: 'PATCH',
           headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -163,14 +163,14 @@ function dblikepic(i){
 }
 
 function deleteimg(i){
-  fetch('http://cfg.wllgrsrv.cf/json/submition/'+i, {
+  fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
   method: 'DELETE'
   });
 }
 
 function fullheartlike(i){
   var likes;
-  fetch('http://cfg.wllgrsrv.cf/json/submition/'+i)
+  fetch('http://webt.wllgrsrv.cf/json/submition/'+i)
      .then(response => {
          return response.json();
      })
@@ -181,7 +181,7 @@ function fullheartlike(i){
        {
          likes=likes+2;
          document.getElementById("fullheart"+i).style.color="#db2727";
-         fetch('http://cfg.wllgrsrv.cf/json/submition/'+i, {
+         fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
          method: 'PATCH',
          headers: {
            'Accept': 'application/json, text/plain, */*',
@@ -195,7 +195,7 @@ function fullheartlike(i){
            {
              likes=likes-1;
              document.getElementById("like"+i).style.color="#000";
-             fetch('http://cfg.wllgrsrv.cf/json/submition/'+i, {
+             fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
              method: 'PATCH',
              headers: {
                'Accept': 'application/json, text/plain, */*',
@@ -211,7 +211,7 @@ function fullheartlike(i){
        else {
          likes=likes-2;
          document.getElementById("fullheart"+i).style.color="#000";
-         fetch('http://cfg.wllgrsrv.cf/json/submition/'+i, {
+         fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
          method: 'PATCH',
          headers: {
            'Accept': 'application/json, text/plain, */*',
@@ -230,7 +230,7 @@ function loadPictures(){
   var pictures=new Array(getLenghtOfAproved());
 
   var pics;
-  fetch('http://cfg.wllgrsrv.cf/json/submition')
+  fetch('http://webt.wllgrsrv.cf/json/submition')
      .then(response => {
          return response.json();
      })
@@ -272,7 +272,7 @@ function showDetails(id){
 
 function showList(){
   var pics;
-  fetch('http://cfg.wllgrsrv.cf/json/submition')
+  fetch('http://webt.wllgrsrv.cf/json/submition')
      .then(response => {
          return response.json();
      })
@@ -308,7 +308,7 @@ function showList(){
 
 function changeValue(i){
   var pics;
-  fetch('http://cfg.wllgrsrv.cf/json/submition')
+  fetch('http://webt.wllgrsrv.cf/json/submition')
      .then(response => {
          return response.json();
      })
@@ -317,7 +317,7 @@ function changeValue(i){
 
          if(pics[i-1].approved)
          {
-           fetch('http://cfg.wllgrsrv.cf/json/submition/'+i, {
+           fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
            method: 'PATCH',
            headers: {
              'Accept': 'application/json, text/plain, */*',
@@ -330,7 +330,7 @@ function changeValue(i){
          }
 
          else {
-           fetch('http://cfg.wllgrsrv.cf/json/submition/'+i, {
+           fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
            method: 'PATCH',
            headers: {
              'Accept': 'application/json, text/plain, */*',
@@ -370,7 +370,7 @@ window.onload = function (){
 
 function show(){
   var phones;
-  fetch('http://cfg.wllgrsrv.cf/json/handymodels')
+  fetch('http://webt.wllgrsrv.cf/json/handymodels')
      .then(response => {
          return response.json();
      })
@@ -395,7 +395,7 @@ function show(){
 
 function loadPhones(){
   var phones;
-  fetch('http://cfg.wllgrsrv.cf/json/handymodels')
+  fetch('http://webt.wllgrsrv.cf/json/handymodels')
      .then(response => {
          return response.json();
      })
@@ -465,7 +465,7 @@ function submitnow(){
       {
         alert("3");
         var newPost=new Post(document.getElementById('firstName').value,document.getElementById('lastName').value,document.getElementById('description').value,document.getElementById('model').value +" "+ document.getElementById('model2').value,event.target.result,0,false);
-        fetch('http://cfg.wllgrsrv.cf/json/submition', {
+        fetch('http://webt.wllgrsrv.cf/json/submition', {
         method: 'POST',
         headers: {
           'Accept': 'application/json, text/plain, */*',

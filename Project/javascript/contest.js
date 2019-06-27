@@ -301,43 +301,6 @@ function changeValue(i){
       })
       });
     });
-
-  var pics;
-  fetch('http://webt.wllgrsrv.cf/json/submition')
-     .then(response => {
-         return response.json();
-     })
-     .then(json => {
-         pics=json;
-
-         if(pics[i-1].approved)
-         {
-           fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
-           method: 'PATCH',
-           headers: {
-             'Accept': 'application/json, text/plain, */*',
-             'Content-Type': 'application/json'
-           },
-           body: JSON.stringify({
-               "approved": false
-             })
-         });
-         }
-
-         else {
-           fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
-           method: 'PATCH',
-           headers: {
-             'Accept': 'application/json, text/plain, */*',
-             'Content-Type': 'application/json'
-           },
-           body: JSON.stringify({
-               "approved": true
-             })
-         });
-         }
-     });
-
 }
 
 function goBack(){

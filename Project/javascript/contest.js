@@ -338,23 +338,27 @@ function show(){
        {
          document.getElementById("model2").style.cssText = 'display:none';
        }
-       else if(document.getElementById("model").selectedIndex==5){
-         var string="<input style=\"margin: 0!important; display: none\" type=\"text\" class=\"form-control\" id=\"model2\" placeholder=\"Phonemodel\"  required>";
 
-         document.getElementById('here').innerHTML=string;
-       }
        else{
-         var string="<select style=\"display: none\" class=\"custom-select my-1 mr-sm-2\" id=\"model2\"><option value=\"\">Choose one...</option></select>";
+         if(document.getElementById("model").selectedIndex==5){
+           var string="<input style=\"margin: 0!important; display: none\" type=\"text\" class=\"form-control\" id=\"model2\" placeholder=\"Phonemodel\"  required>";
 
-         document.getElementById('here').innerHTML=string;
-       document.getElementById('model2').options.length=1;
-       document.getElementById("model2").style.cssText = 'display:flex !important; margin:0 0 1rem 0!important';
-         phones=json[0];
-         phones=phones[Object.getOwnPropertyNames(phones)[document.getElementById("model").selectedIndex-1]];
-
-         for (var i = 0; i < phones.length; i++) {
-           document.getElementById('model2').options[document.getElementById('model2').options.length] = new Option( phones[i],phones[i]);
+           document.getElementById('here').innerHTML=string;
          }
+         else {
+           var string="<select style=\"display: none\" class=\"custom-select my-1 mr-sm-2\" id=\"model2\"><option value=\"\">Choose one...</option></select>";
+
+           document.getElementById('here').innerHTML=string;
+           document.getElementById('model2').options.length=1;
+           phones=json[0];
+           phones=phones[Object.getOwnPropertyNames(phones)[document.getElementById("model").selectedIndex-1]];
+
+           for (var i = 0; i < phones.length; i++) {
+             document.getElementById('model2').options[document.getElementById('model2').options.length] = new Option( phones[i],phones[i]);
+           }
+         }
+         document.getElementById("model2").style.cssText = 'display:flex !important; margin:0 0 1rem 0!important';
+
        }
      });
 

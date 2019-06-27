@@ -341,7 +341,7 @@ function show(){
 
        else{
          if(document.getElementById("model").selectedIndex==5){
-           var string="<input style=\"margin: 0!important; display: none\" type=\"text\" class=\"form-control\" id=\"model2\" placeholder=\"Phonemodel\"  required>";
+           var string="<input style=\"margin: 0!important; display: none\" type=\"text\" class=\"form-control\" id=\"model2\" placeholder=\"Phone model\"  required>";
 
            document.getElementById('here').innerHTML=string;
          }

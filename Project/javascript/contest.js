@@ -36,29 +36,6 @@ function getLenghtOfAproved(){
      });
 }
 
-function getAprovedArray(){
-  var pics;
-  fetch('http://webt.wllgrsrv.cf/json/submition')
-     .then(response => {
-         return response.json();
-     })
-     .then(json => {
-         pics=json;
-         var approved=new Array(getLenghtOfAproved());
-         var index=0;
-
-         for (var i = 0; i < pics.length; i++) {
-           if(pics[i].approved)
-           {
-             approved[index]=pics[i];
-             index++;
-           }
-         }
-         return approved;
-     });
-
-}
-
 
 function likepic(i){
   var likes;
@@ -305,8 +282,26 @@ function showList(){
 
 
 }
-
 function changeValue(i){
+  fetch('http://webt.wllgrsrv.cf/json/submition/'+i)
+     .then(response => {
+         return response.json();
+     })
+     .then(json => {
+         approved=json.approved;
+     }).then(function(){
+      fetch('http://webt.wllgrsrv.cf/json/submition/'+i, {
+      method: 'PATCH',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+          "approved": !approved
+      })
+      });
+    });
+
   var pics;
   fetch('http://webt.wllgrsrv.cf/json/submition')
      .then(response => {
@@ -458,12 +453,9 @@ function submitnow(){
 
   if (document.getElementById('firstName').value!="" && document.getElementById('lastName').value!="" && document.getElementById('description').value!="" && document.getElementById('model').value!="" && document.getElementById('file').value!="") {
       var file = document.getElementById("file").files[0];
-      alert("1");
       var reader = new FileReader();
-      alert("2");
       reader.onload=function(event)
       {
-        alert("3");
         var newPost=new Post(document.getElementById('firstName').value,document.getElementById('lastName').value,document.getElementById('description').value,document.getElementById('model').value +" "+ document.getElementById('model2').value,event.target.result,0,false);
         fetch('http://webt.wllgrsrv.cf/json/submition', {
         method: 'POST',

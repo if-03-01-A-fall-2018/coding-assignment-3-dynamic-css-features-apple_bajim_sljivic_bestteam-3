@@ -369,7 +369,7 @@ function loadPhones(){
      .then(json => {
          phones=json[0];
 
-         for (var i = 0; i < 4; i++) {
+         for (var i = 0; i < 5; i++) {
            document.getElementById('model').options[document.getElementById('model').options.length] = new Option( Object.getOwnPropertyNames(phones)[i]);
          }
 

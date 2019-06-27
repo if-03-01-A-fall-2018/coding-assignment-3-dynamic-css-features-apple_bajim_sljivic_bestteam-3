@@ -212,6 +212,7 @@ function loadPictures(){
          return response.json();
      })
      .then(json => {
+          document.getElementById('spinner').style.cssText='display: none !important';
          pics=json;
          var approved;
          var index=0;

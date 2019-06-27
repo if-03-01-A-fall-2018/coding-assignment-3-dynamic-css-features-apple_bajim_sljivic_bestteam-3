@@ -98,9 +98,7 @@
                       </select>
                     </div>
                     <div class="form-row" id="here">
-                      <select style="display: none" class="custom-select my-1 mr-sm-2" id="model2">
-                        <option value="">Choose one...</option>
-                      </select>
+                      
                     </div>
                     <div class="form-row">
                       <div class="custom-file">
@@ -121,7 +119,7 @@
       </article>
     </article>
     <center>
-    <div class="spinner-border mx-auto" id="spinner" role="status">
+    <div class="spinner-border mx-auto" id="spinner" role="status" style="margin-top:1rem;height:50px;width:50px">
       <span class="sr-only">Loading...</span>
     </div>
   </center>
@@ -178,6 +176,9 @@ $('.custom-file-input').on('change', function() {
         </section>
       </article>
     </footer>
+    <center>
+      <img style="width: 300px" src="../../images/other/qrcode.png">
+    </center>
     <input id="password" class="password" type="text" name="password">
     <input class="password" type="button" onclick="showList()">
 
